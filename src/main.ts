@@ -1,24 +1,38 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import 'phaser';
+import './style.css';
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+class PlayGame extends Phaser.Scene {
+    image! : Phaser.GameObjects.Image;
+    constructor() {
+        super('PlayGame');
+    }
+    preload() : void {
+        this.load.image('logo', 'assets/phaser3-logo.png');    
+    }
+    create() : void {
+        this.image = this.add.image(400, 300, 'logo');
+    }
+    update() : void {
+        this.image.rotation += 0.01;   
+    }
+}
+ 
+let configObject : Phaser.Types.Core.GameConfig = {
+    scale : {
+        mode        : Phaser.Scale.FIT,
+        autoCenter  : Phaser.Scale.CENTER_BOTH,
+        parent      : 'thegame',
+        width       : 800,
+        height      : 600
+    },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            debug: true,
+            gravity: { x: 0, y: 200 }
+        }
+    },
+    scene: PlayGame
+};
+ 
+new Phaser.Game(configObject);
