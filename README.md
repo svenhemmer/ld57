@@ -4,7 +4,7 @@ Run ```npm install``` to get all dependencies and the project in a runable state
 
 ## Structure
 ```
-+- dist (wird erzeugt, späteres deliverable)
++- dist (is being build, the final deliverable)
 +- public
 |  +- assets (all assets for the game, images, sounds, music etc., will be copied by vite - subfolders not tested yet)
 +- src
