@@ -7,7 +7,7 @@ class PlayGame extends Phaser.Scene {
         super('PlayGame');
     }
     preload() : void {
-        this.load.image('logo', 'assets/phaser3-logo.png');    
+        this.load.image('logo', 'phaser3-logo.png');    
     }
     create() : void {
         this.image = this.add.image(400, 300, 'logo');
