@@ -7,7 +7,7 @@ export class Level1 extends GameScene {
   }
 
   preload(): void {
-    this.load.image('base_tiles', 'lvl1/terrain_atlas.png');
+    this.load.image('base_tiles', 'lvl1/tileset.png');
 
     this.load.tilemapTiledJSON('lvl1', 'lvl1/combined.json');
 
@@ -17,7 +17,7 @@ export class Level1 extends GameScene {
   create(): void {
     const lvl1 = this.make.tilemap({ key: 'lvl1' });
 
-    const tileset = lvl1.addTilesetImage('terrain_atlas', 'base_tiles');
+    const tileset = lvl1.addTilesetImage('tileset', 'base_tiles');
 
     if (!tileset) {
       throw 'No tiles found for ' + 'base_tiles';

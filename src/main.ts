@@ -68,6 +68,7 @@ let configObject: Phaser.Types.Core.GameConfig = {
     parent: 'thegame',
     width: 800,
     height: 600,
+    zoom: 4
   },
   pixelArt: true,
   physics: {
