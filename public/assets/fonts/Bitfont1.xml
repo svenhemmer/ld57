@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
     <font>
         <info face="Bitfont1.png" size="10"/>
-        <common lineHeight="8" base="10" scaleW="6" scaleH="8" pages="1" packed="0"/>    
+        <common lineHeight="14" base="10" scaleW="6" scaleH="8" pages="1" packed="0"/>    
         <pages>
             <page id="0" file="Bitfont1.png"/>
         </pages>

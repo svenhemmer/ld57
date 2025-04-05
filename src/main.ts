@@ -1,7 +1,6 @@
 import 'phaser';
 import './style.css';
-import { StartScene } from './scenes/start.scene.ts';
-import { Level1 } from './level1';
+import { ControlsScene } from './scenes/controls.scene.ts';
 import { Level2 } from './level2';
 // import { buttonStyleConfig } from './utils/text.utils.ts';
 
@@ -55,7 +54,7 @@ class MainScene extends Phaser.Scene {
   update(): void {}
 
   private goToFirstScene() {
-    const sceneName = Level2.name;
+    const sceneName = ControlsScene.name;
     console.log(`Starting ${sceneName}`);
     this.scene.start(sceneName);
   }
@@ -79,7 +78,7 @@ let configObject: Phaser.Types.Core.GameConfig = {
       gravity: { x: 0, y: 420 },
     },
   },
-  scene: [MainScene, StartScene, Level2],
+  scene: [MainScene, ControlsScene, Level2],
 };
 
 new Phaser.Game(configObject);
