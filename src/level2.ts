@@ -1,5 +1,10 @@
+import { Hero } from './hero'
+
 export class Level2 extends Phaser.Scene {
     image! : Phaser.GameObjects.Image;
+
+    private hero: Hero | null = null
+
     constructor() {
         super('Level 2');
     }
@@ -7,6 +12,8 @@ export class Level2 extends Phaser.Scene {
         this.load.image('base_tiles', 'lvl1/terrain_atlas.png')
 
         this.load.tilemapTiledJSON('lvl1', 'lvl1/combined.json')
+
+        this.load.image('hero', 'hero.png')
     }
     create() : void {
         const lvl1 = this.make.tilemap({ key: 'lvl1' })
@@ -23,7 +30,11 @@ export class Level2 extends Phaser.Scene {
 
         bg?.postFX.addBlur()
         fg?.postFX.addBlur()
+
+        this.hero = new Hero(this, 100, 50)
     }
+
     update() : void {
+        this.hero!.update();
     }
 }
