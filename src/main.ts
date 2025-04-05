@@ -1,23 +1,16 @@
 import 'phaser';
 import './style.css';
-import StartScene from "./scenes/start-scene.ts";
+import { StartScene } from './scenes/start.scene.ts';
 import { Level1 } from './level1';
+import { buttonStyleConfig } from './utils/text.utils.ts';
 
-const buttonConfig = (fontSize = 40) => ({
-  fontFamily: "Bitfont",
-  backgroundColor: "#0a0",
-  fontSize: `${fontSize}px`,
-});
-
-class PlayGame extends Phaser.Scene {
-  image!: Phaser.GameObjects.Image;
-
+class MainScene extends Phaser.Scene {
   constructor() {
-    super("PlayGame");
+    super(MainScene.name);
   }
 
   preload(): void {
-    this.load.font("Bitfont", "/fonts/Bitfont.ttf", "truetype");
+    this.load.font('Bitfont', '/fonts/Bitfont.ttf', 'truetype');
   }
 
   create(): void {
@@ -27,50 +20,49 @@ class PlayGame extends Phaser.Scene {
     const title = this.add.text(
       centerX,
       startY,
-      "Depth of Field",
-      buttonConfig(),
+      'Depth of Field',
+      buttonStyleConfig()
     );
     title.setOrigin();
 
     const pressToContinue = this.add.text(
       centerX,
       startY + title.height + 100,
-      "Press any key to continue",
-      buttonConfig(24),
+      'Press any key to continue',
+      buttonStyleConfig(24)
     );
     pressToContinue.setOrigin();
 
-    this.input.on("pointerdown", () => this.goToStartScene());
-    this.input.keyboard?.on("keydown-ENTER", () => this.goToStartScene());
+    this.input.on('pointerdown', () => this.goToFirstScene());
+    this.input.keyboard?.on('keydown', () => this.goToFirstScene());
   }
 
-  update(): void {
-    //this.image.rotation += 0.01;
-  }
+  update(): void {}
 
-  private goToStartScene() {
-    console.log("Starting StartScene");
-    this.scene.start("StartScene");
+  private goToFirstScene() {
+    const sceneName = Level1.name;
+    console.log(`Starting ${sceneName}`);
+    this.scene.start(sceneName);
   }
 }
- 
-let configObject : Phaser.Types.Core.GameConfig = {
-    backgroundColor: '#FFF',
-    scale : {
-        mode        : Phaser.Scale.FIT,
-        autoCenter  : Phaser.Scale.CENTER_BOTH,
-        parent      : 'thegame',
-        width       : 800,
-        height      : 600
+
+let configObject: Phaser.Types.Core.GameConfig = {
+  backgroundColor: '#FFF',
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    parent: 'thegame',
+    width: 800,
+    height: 600,
+  },
+  physics: {
+    default: 'arcade',
+    arcade: {
+      debug: true,
+      gravity: { x: 0, y: 0 },
     },
-    physics: {
-        default: 'arcade',
-        arcade: {
-            debug: true,
-            gravity: { x: 0, y: 0 }
-        }
-    },
-    scene: [PlayGame, StartScene, Level1]
+  },
+  scene: [MainScene, StartScene, Level1],
 };
 
 new Phaser.Game(configObject);
