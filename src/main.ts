@@ -30,7 +30,7 @@ class PlayGame extends Phaser.Scene {
       "Depth of Field",
       buttonConfig(),
     );
-    title.setOrigin(0.5, 0.5);
+    title.setOrigin();
 
     const pressToContinue = this.add.text(
       centerX,
@@ -38,7 +38,7 @@ class PlayGame extends Phaser.Scene {
       "Press any key to continue",
       buttonConfig(24),
     );
-    pressToContinue.setOrigin(0.5, 0.5);
+    pressToContinue.setOrigin();
 
     this.input.on("pointerdown", () => this.goToStartScene());
     this.input.keyboard?.on("keydown-ENTER", () => this.goToStartScene());

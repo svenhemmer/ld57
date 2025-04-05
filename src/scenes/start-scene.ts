@@ -6,10 +6,16 @@ export default class StartScene extends Phaser.Scene {
   preload() {}
 
   create() {
-    this.add.text(100, 100, "Test", {
-      fontFamily: "Bitfont",
-      fontSize: "40px",
-      color: "#ffffff",
-    });
+    const test = this.add.text(
+      this.cameras.main.centerX,
+      this.cameras.main.centerY,
+      "Test",
+      {
+        fontFamily: "Bitfont",
+        fontSize: "40px",
+        color: "#ffffff",
+      },
+    );
+    test.setOrigin();
   }
 }
