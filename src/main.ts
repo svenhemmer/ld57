@@ -1,7 +1,6 @@
 import 'phaser';
 import './style.css';
 import { Level1 } from './level1';
-import { Level2 } from './level2';
 
 class PlayGame extends Phaser.Scene {
     image! : Phaser.GameObjects.Image;
@@ -35,7 +34,7 @@ let configObject : Phaser.Types.Core.GameConfig = {
             gravity: { x: 0, y: 0 }
         }
     },
-    scene: Level2
+    scene: Level1
 };
  
 new Phaser.Game(configObject);
