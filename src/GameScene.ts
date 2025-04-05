@@ -62,13 +62,13 @@ export class GameScene extends Phaser.Scene {
         if (!this.input.keyboard) {
             return
         }
-        const plus = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W)
-        const minus = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
+        const up = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP)
+        const down = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN)
 
-        plus.on('down', () => {
+        up.on('down', () => {
             this.zoomIn()
         })
-        minus.on('down', () => {
+        down.on('down', () => {
             this.zoomOut()
         })
     }

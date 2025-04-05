@@ -14,6 +14,14 @@ export class Hero extends Phaser.GameObjects.Sprite {
         this.setData("speed", 200);
 
         this.scene.add.existing(this);
+
+        if (!this.scene.input.keyboard) {
+            return
+        }
+        const space = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE)
+        space.on('down', () => {
+            this.jump()
+        })
     }
 
     controls() {
@@ -22,15 +30,6 @@ export class Hero extends Phaser.GameObjects.Sprite {
         }
         const left = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT)
         const right = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT)
-        const up = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP)
-        const down = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN)
-
-        if (down.isDown) {
-            this.moveDown();
-        }
-        else if (up.isDown) {
-            this.moveUp();
-        }
         
         if (left.isDown) {
             this.moveLeft();
@@ -40,14 +39,13 @@ export class Hero extends Phaser.GameObjects.Sprite {
         }
     }
 
-    moveUp() {
-        this.body.velocity.y = -this.getData("speed");
+    jump() {
+        console.debug(this.body.velocity)
+        if (this.body.velocity.y === 0) {
+            this.body.setVelocityY(-200);
+        }
     }
-    
-    moveDown() {
-        this.body.velocity.y = this.getData("speed");
-    }
-    
+
     moveLeft() {
         this.body.velocity.x = -this.getData("speed");
     }
@@ -57,7 +55,11 @@ export class Hero extends Phaser.GameObjects.Sprite {
     }
 
     update() {
-        this.body.setVelocity(0, 0);
+        if (this.body.velocity.y === 0) {
+            // While standing on the ground, reset horizontal velocity to zero (if user presses arrow keys, it will be set to another value in `this.controls` anyway)
+            this.body.setVelocityX(0)
+        }
+
         this.controls();
 
         this.x = Phaser.Math.Clamp(this.x, 0, Number(this.scene.game.config.width));
