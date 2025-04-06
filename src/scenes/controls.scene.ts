@@ -43,6 +43,14 @@ export class ControlsScene extends Phaser.Scene {
   }
 
   goToNextScene() {
+    // @ts-ignore
+    if (globalThis.previousScene) {
+      // @ts-ignore
+      this.scene.switch(globalThis.previousScene)
+      // @ts-ignore
+      globalThis.previousScene = undefined
+      return
+    }
     gotoNextLevel(this.scene)
   }
 }

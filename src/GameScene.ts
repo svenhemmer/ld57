@@ -1,8 +1,8 @@
 import { Hero } from './hero'
-import { LayerIndicator } from './LayerIndicator'
 import { wasLastLevel } from './levels'
 import { EndScene } from './scenes/end.scene'
 import { SuccessScene } from './scenes/success.scene'
+import { Hud } from './hud'
 
 type Layer = {
     name: string
@@ -16,18 +16,19 @@ export class GameScene extends Phaser.Scene {
     tilemap?: Phaser.Tilemaps.Tilemap
     hero: Hero | null = null
 
-    private layerIndicator: LayerIndicator
+    private hud: Hud
 
     currentLayer: number = 1
     private currentLayerCollisions: Phaser.Physics.Arcade.Collider | null = null
 
     constructor(name: string) {
         super(name);
-        this.layerIndicator = new LayerIndicator(this)
+        this.hud = new Hud(this)
     }
 
     create() {
         this.initControls()
+        this.hud.create()
 
         // this.cameras.main.setBounds(0, 0, this.tilemap!.widthInPixels, this.tilemap!.heightInPixels, true);
         this.cameras.main.startFollow(this.hero!.sprite)
@@ -59,7 +60,7 @@ export class GameScene extends Phaser.Scene {
         })
         this.currentLayer = newLayer
 
-        this.layerIndicator.update()
+        this.hud.update()
     }
 
     onPlayerReachesGoal() {
