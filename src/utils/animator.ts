@@ -22,11 +22,8 @@ export const animator = (scene: Scene) => {
 export const getAnimatorConvenience = (scene: Scene) => {
     const anim = animator(scene);
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.idle);
+    anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.jump);
+    anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.run);
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.spawn);
-    const obj = {
-        // play: (state: string) => {
-        //     // scene.anims.play(state, true);
-        // }
-    }
-    return obj;
+    anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.die);
 }
