@@ -11,7 +11,6 @@ import { Level9 } from "./level9";
 
 // lists levels in their order
 export const levels = [
-    Level13,
     Level2,
     Level3,
     // Level4, // not a useful level anymore
@@ -20,9 +19,10 @@ export const levels = [
     Level8,
     Level11,
     Level9,
-    Level12,
     Level7,
     Level10,
+    Level13,
+    Level12,
 ]
 
 let currentLevel = -1
