@@ -12,7 +12,7 @@ export class Hero {
         this.sprite = scene.add.sprite(x, y, HERO_WORDS.spawn + TEXTURE_POSTFIX);
         this.scene.add.existing(this.sprite);
         this.scene.physics.world.enableBody(this.sprite, 0);
-        this.scene.physics.world
+        this.sprite.anims.play(HERO_WORDS.spawn, true);
         this.sprite.setData("speed", 200);
 
 
@@ -23,10 +23,12 @@ export class Hero {
         space.on('down', () => {
             this.jump()
         })
+        this.sprite.play(HERO_WORDS.spawn);
     }
 
     controls() {
         if (!this.scene.input.keyboard) {
+            this.stop
             return
         }
         const left = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT)
@@ -53,6 +55,10 @@ export class Hero {
     
     moveRight() {
         this.sprite.body!.velocity.x = this.sprite.getData("speed");
+    }
+
+    stop() {
+        this.sprite.body!.velocity.x = 0;
     }
 
     update() {

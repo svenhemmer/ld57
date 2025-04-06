@@ -14,6 +14,15 @@ export type ImageDescription = {
     name: string;
 }
 
+export type SpriteSheetDescription = {
+    path: string;
+    name: string;
+    frameDimensions: {
+        frameWidth: number,
+        frameHeight: number
+    }
+}
+
 export type SoundDescription = {
     path: string;
     name: string;
@@ -30,6 +39,7 @@ export type Loader = {
     addImages: (descriptions: ImageDescription[]) => void;
     addMusic: (descriptions: MusicDescription[]) => void;
     addSoundFx: (descriptions: SoundDescription[]) => void;
+    addSpriteSheet: (descriptions: SpriteSheetDescription[]) => void;
     addMapDescriptions: (descriptions: JsonTileMapDescription[]) => void;
     load: (callback: (progress: number) => void) => void;   
 }

@@ -8,7 +8,7 @@ export const HERO_WORDS = {
     die: 'HERO_DIE'
 };
 
-export const TEXTURE_POSTFIX = '_TEX';
+export const TEXTURE_POSTFIX = '';
 
 export const HERO_ANIMATION_DESCRIPTIONS = {
     idle: {
@@ -32,12 +32,12 @@ export const HERO_ANIMATION_DESCRIPTIONS = {
 export const heroConvenience = {
     
     addImagesToLoader: ( loader: Loader ) => {
-        loader.addImages([
-            { name: HERO_WORDS.idle + TEXTURE_POSTFIX, path: 'animations/bob_idle.png' },
-            { name: HERO_WORDS.run + TEXTURE_POSTFIX, path: 'animations/bob_run.png' },
-            { name: HERO_WORDS.jump + TEXTURE_POSTFIX, path: 'animations/bob_jump.png' },
-            { name: HERO_WORDS.spawn + TEXTURE_POSTFIX, path: 'animations/bob_spawn.png' },
-            { name: HERO_WORDS.die + TEXTURE_POSTFIX, path: 'animations/bob_die.png' }
+        loader.addSpriteSheet([
+            { name: HERO_WORDS.idle + TEXTURE_POSTFIX, path: 'animations/bob_idle.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            { name: HERO_WORDS.run + TEXTURE_POSTFIX, path: 'animations/bob_run.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            { name: HERO_WORDS.jump + TEXTURE_POSTFIX, path: 'animations/bob_jump.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            { name: HERO_WORDS.spawn + TEXTURE_POSTFIX, path: 'animations/bob_spawn.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            { name: HERO_WORDS.die + TEXTURE_POSTFIX, path: 'animations/bob_die.png', frameDimensions: { frameHeight: 32, frameWidth: 32} }
         ]);
     }
 }

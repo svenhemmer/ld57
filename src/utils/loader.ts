@@ -1,6 +1,6 @@
 import { Scene } from "phaser";
 import { Loader } from "phaser";
-import type { ImageDescription, MusicDescription, SoundDescription, JsonTileMapDescription } from "../models/loader-info";
+import type { ImageDescription, MusicDescription, SoundDescription, JsonTileMapDescription, SpriteSheetDescription } from "../models/loader-info";
 import { heroConvenience } from "./hero-convenience";
 
 export const createLoader = (scene: Scene) => {
@@ -10,6 +10,10 @@ export const createLoader = (scene: Scene) => {
 
         addImages: (descriptions: ImageDescription[]) => {
             loadFunctions.push(...descriptions.map(({ name, path }) => () => scene.load.image(name, path)));
+        },
+
+        addSpriteSheet: (descriptions: SpriteSheetDescription[]) => {
+            loadFunctions.push(...descriptions.map(({ name, path, frameDimensions }) => () => scene.load.spritesheet(name, path, frameDimensions)));
         },
 
         addMusic: (descriptions: MusicDescription[]) => {
