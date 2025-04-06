@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="7" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="25">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="7" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="26">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -13,7 +13,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 9,10,10,11,10,10,10,11,10,10,10,10,10,10,10,10,10,11,10,10,10,10,10,10,12
 </data>
  </layer>
@@ -25,6 +25,11 @@
   <object id="24" x="778" y="160" width="22" height="30">
    <properties>
     <property name="Goal" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="25" x="15.6667" y="165" width="18.6667" height="16">
+   <properties>
+    <property name="Start" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>

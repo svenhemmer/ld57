@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="29">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="31">
  <editorsettings>
   <export target="lvl5.json" format="json"/>
  </editorsettings>
@@ -10,7 +10,7 @@
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-39,40,0,0,0,0,41,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,73,
+39,40,0,0,0,0,41,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,0,
 47,48,0,0,0,0,41,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,48,
 55,56,0,0,0,0,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,36,55,56,
 63,64,0,0,0,0,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,36,43,44,63,64,
@@ -32,7 +32,7 @@
     <property name="Goal" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="18" x="7.33332" y="70.3333" width="54.6667" height="49.3333"/>
+  <object id="18" x="7.33332" y="85.3333" width="54.6667" height="34.3333"/>
   <object id="19" x="22.0033" y="98.3333" width="22.6667" height="91.3333"/>
   <object id="20" x="196" y="28" width="49.3333" height="164"/>
   <object id="21" x="709.333" y="28" width="52" height="165.333"/>
@@ -41,6 +41,11 @@
   <object id="28" x="617.333" y="253.333" width="238.667" height="70.6667">
    <properties>
     <property name="Death" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="30" x="27.6667" y="59" width="18.6667" height="16">
+   <properties>
+    <property name="Start" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="7">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="10">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -23,8 +23,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,
+39,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+47,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 9,11,11,11,11,10,11,11,12,0,0,0,0,0,0,0,0,9,10,10,10,10,10,10,12,
 17,19,19,19,19,19,19,19,20,0,0,0,0,0,0,0,0,17,19,19,19,19,19,19,20,
 17,18,18,18,18,18,18,18,20,73,74,73,74,73,74,73,74,17,18,18,18,18,18,18,20
@@ -45,5 +45,11 @@
     <property name="Goal" type="bool" value="true"/>
    </properties>
   </object>
+  <object id="8" x="23.6667" y="462" width="18.6667" height="16">
+   <properties>
+    <property name="Start" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" x="10" y="493" width="46" height="52"/>
  </objectgroup>
 </map>
