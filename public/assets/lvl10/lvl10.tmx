@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="23">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="24">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -51,6 +51,11 @@
   <object id="22" x="771" y="97" width="27" height="30">
    <properties>
     <property name="Goal" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="23" x="20.6667" y="519" width="18.6667" height="16">
+   <properties>
+    <property name="Start" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>

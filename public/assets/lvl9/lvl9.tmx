@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="14">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="15">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -46,6 +46,11 @@
   </object>
   <object id="8" x="803" y="149" width="46" height="287"/>
   <object id="9" x="-3" y="98" width="37" height="443"/>
+  <object id="14" x="52.6667" y="516" width="18.6667" height="16">
+   <properties>
+    <property name="Start" type="bool" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="2" name="Foreground" width="25" height="20">
   <data encoding="csv">

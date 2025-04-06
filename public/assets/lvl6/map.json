@@ -85,6 +85,23 @@
                  "width":22,
                  "x":778,
                  "y":160
+                }, 
+                {
+                 "height":16,
+                 "id":25,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"Start",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18.6667,
+                 "x":15.66665,
+                 "y":165
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -345,7 +362,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":25,
+ "nextobjectid":26,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

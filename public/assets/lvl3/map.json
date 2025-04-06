@@ -93,6 +93,23 @@
                  "width":158,
                  "x":480.666666666667,
                  "y":161.333333333333
+                }, 
+                {
+                 "height":16,
+                 "id":20,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"Start",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":18.6667,
+                 "x":7.33331666666669,
+                 "y":166.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -216,7 +233,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":20,
+ "nextobjectid":21,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

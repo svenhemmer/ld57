@@ -4,6 +4,7 @@ import { EndScene } from './scenes/end.scene'
 import { SuccessScene } from './scenes/success.scene'
 import { Hud } from './hud'
 import { LevelGoal } from './LevelGoal'
+import { EntryGate } from './EntryGate'
 
 type Layer = {
     name: string
@@ -31,6 +32,18 @@ export class GameScene extends Phaser.Scene {
     levelGoal?: LevelGoal
     levelGoalLayer: number = 0
     levelGoalBlurEffect?: Phaser.FX.Blur
+
+    placePlayer() {
+        this.layers
+            .flatMap(layer => layer.collisionRects)
+            .forEach(rect => {
+                if (rect.data?.values?.Start) {
+                    console.debug('found start → render sprite')
+                    const entryGate = new EntryGate(this, rect.x + rect.width / 2, rect.y + rect.height / 2)
+                    this.hero = new Hero(this, rect.x + rect.width / 2, rect.y + rect.height / 2);
+                }
+            })
+    }
 
     create() {
         for (let i = 0; i < this.layers.length; i++) {

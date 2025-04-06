@@ -51,6 +51,10 @@ export const getLoaderConvenience = (scene: Scene) => {
                 { name: "hovering", path: 'animations/goal_hovering.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
             ]);
 
+            loader.addSpriteSheet([
+                { name: "entry-gate-hovering", path: 'animations/gate.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            ]);
+
             return obj;
         },
         prepareLevel: (tileset: ImageDescription, jsonDescription: JsonTileMapDescription) => {

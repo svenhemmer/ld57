@@ -1,5 +1,4 @@
 import { GameScene } from './GameScene';
-import { Hero } from './hero';
 import { getAnimatorConvenience } from './utils/animator';
 import { getLoaderConvenience } from './utils/loader';
 
@@ -42,8 +41,7 @@ export class Level2 extends GameScene {
       blurEffect: fg.postFX.addBlur(),
     });
 
-    this.hero = new Hero(this, 100, 50);
-
+    this.placePlayer()
     this.changeLayer(0);
 
     super.create();

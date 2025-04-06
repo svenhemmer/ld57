@@ -41,7 +41,7 @@ export class Level5 extends GameScene {
       blurEffect: fg.postFX.addBlur(),
     });
 
-    this.hero = new Hero(this, 100, 50);
+    this.placePlayer()
 
     this.changeLayer(1);
 

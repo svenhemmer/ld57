@@ -42,7 +42,7 @@ export class Level7 extends GameScene {
       blurEffect: fg.postFX.addBlur(),
     });
 
-    this.hero = new Hero(this, 100, 600);
+    this.placePlayer()
 
     this.changeLayer(1);
 
