@@ -1,3 +1,4 @@
+import { renderPressAnyKeyToContinue } from "../utils/text.utils";
 import { SuccessScene } from "./success.scene";
 
 export class ControlsScene extends Phaser.Scene {
@@ -28,13 +29,7 @@ export class ControlsScene extends Phaser.Scene {
       32); 
     controls2.setOrigin();
 
-    const pressToContinue = this.add.bitmapText(
-      centerX,
-      startY + 300,
-      'our-own-pixelfont',
-      "PRESS ANY KEY TO CONTINUE",
-      32); 
-    pressToContinue.setOrigin();
+    renderPressAnyKeyToContinue(this, centerX, startY + 300)
 
     this.input.on('pointerdown', () => this.goToNextScene());
     this.input.keyboard?.on('keydown', () => this.goToNextScene());

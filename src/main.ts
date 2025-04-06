@@ -3,6 +3,7 @@ import './style.css';
 import { ControlsScene } from './scenes/controls.scene.ts';
 import { levels } from './levels.ts';
 import { SuccessScene } from './scenes/success.scene.ts';
+import { renderPressAnyKeyToContinue } from './utils/text.utils.ts';
 // import { buttonStyleConfig } from './utils/text.utils.ts';
 
 class MainScene extends Phaser.Scene {
@@ -34,19 +35,7 @@ class MainScene extends Phaser.Scene {
     // );
     title.setOrigin();
 
-    const pressToContinue = this.add.bitmapText(
-        centerX,
-        startY + title.height + 100,
-        'our-own-pixelfont',
-        "PRESS ANY KEY TO CONTINUE",
-        32); 
-    // const pressToContinue = this.add.text(
-    //   centerX,
-    //   startY + title.height + 100,
-    //   'Press any key to continue',
-    //   buttonStyleConfig(24)
-    // );
-    pressToContinue.setOrigin();
+    renderPressAnyKeyToContinue(this, centerX, startY + title.height + 100)
 
     this.input.on('pointerdown', () => this.goToFirstScene());
     this.input.keyboard?.on('keydown', () => this.goToFirstScene());
