@@ -21,7 +21,7 @@
 </data>
  </layer>
  <objectgroup id="3" name="Middleground collision">
-  <object id="10" x="-2.5625" y="189" width="644" height="28"/>
+  <object id="10" x="-2.5625" y="192.75" width="644" height="24.25"/>
   <object id="14" x="-24" y="-6.66667" width="24" height="232"/>
   <object id="15" x="641.333" y="-4.66667" width="24" height="232"/>
   <object id="3" x="276" y="88" width="18" height="100"/>
@@ -42,7 +42,7 @@
 </data>
  </layer>
  <objectgroup id="4" name="Foreground collision">
-  <object id="6" x="3" y="189" width="637" height="30"/>
+  <object id="6" x="3" y="192.25" width="637" height="26.75"/>
   <object id="11" x="614" y="166.667" width="23.3333" height="21.3333">
    <properties>
     <property name="Goal" type="bool" value="true"/>

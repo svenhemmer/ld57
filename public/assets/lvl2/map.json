@@ -29,7 +29,7 @@
          "name":"Middleground collision",
          "objects":[
                 {
-                 "height":28,
+                 "height":24.25,
                  "id":10,
                  "name":"",
                  "rotation":0,
@@ -37,7 +37,7 @@
                  "visible":true,
                  "width":644,
                  "x":-2.5625,
-                 "y":189
+                 "y":192.75
                 }, 
                 {
                  "height":232,
@@ -116,7 +116,7 @@
          "name":"Foreground collision",
          "objects":[
                 {
-                 "height":30,
+                 "height":26.75,
                  "id":6,
                  "name":"",
                  "rotation":0,
@@ -124,7 +124,7 @@
                  "visible":true,
                  "width":637,
                  "x":3,
-                 "y":189
+                 "y":192.25
                 }, 
                 {
                  "height":21.3333,

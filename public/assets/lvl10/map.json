@@ -39,7 +39,7 @@
          "name":"Background collision",
          "objects":[
                 {
-                 "height":30,
+                 "height":16.5,
                  "id":1,
                  "name":"",
                  "properties":[
@@ -53,7 +53,7 @@
                  "visible":true,
                  "width":802,
                  "x":0,
-                 "y":613
+                 "y":626.5
                 }, 
                 {
                  "height":60,
@@ -74,11 +74,11 @@
                  "type":"",
                  "visible":true,
                  "width":156,
-                 "x":643,
-                 "y":132
+                 "x":642.333333333333,
+                 "y":130
                 }, 
                 {
-                 "height":88,
+                 "height":90.3333333333333,
                  "id":4,
                  "name":"",
                  "rotation":0,
@@ -86,10 +86,10 @@
                  "visible":true,
                  "width":64,
                  "x":0,
-                 "y":324
+                 "y":321.666666666667
                 }, 
                 {
-                 "height":61,
+                 "height":52.5,
                  "id":5,
                  "name":"",
                  "rotation":0,
@@ -97,10 +97,10 @@
                  "visible":true,
                  "width":61,
                  "x":258,
-                 "y":516
+                 "y":524.5
                 }, 
                 {
-                 "height":66,
+                 "height":54,
                  "id":6,
                  "name":"",
                  "rotation":0,
@@ -108,10 +108,10 @@
                  "visible":true,
                  "width":65,
                  "x":416,
-                 "y":542
+                 "y":554
                 }, 
                 {
-                 "height":63,
+                 "height":51.5,
                  "id":7,
                  "name":"",
                  "rotation":0,
@@ -119,10 +119,10 @@
                  "visible":true,
                  "width":59,
                  "x":578,
-                 "y":480
+                 "y":491.5
                 }, 
                 {
-                 "height":60,
+                 "height":54,
                  "id":8,
                  "name":"",
                  "rotation":0,
@@ -130,10 +130,10 @@
                  "visible":true,
                  "width":64,
                  "x":706,
-                 "y":420
+                 "y":426
                 }, 
                 {
-                 "height":59,
+                 "height":54,
                  "id":9,
                  "name":"",
                  "rotation":0,
@@ -141,10 +141,10 @@
                  "visible":true,
                  "width":54,
                  "x":518,
-                 "y":357
+                 "y":362
                 }, 
                 {
-                 "height":60,
+                 "height":54,
                  "id":10,
                  "name":"",
                  "rotation":0,
@@ -152,7 +152,7 @@
                  "visible":true,
                  "width":55,
                  "x":71,
-                 "y":323
+                 "y":329
                 }, 
                 {
                  "height":53,
@@ -239,7 +239,7 @@
                  "y":405.66665
                 }, 
                 {
-                 "height":33,
+                 "height":29.25,
                  "id":25,
                  "name":"",
                  "rotation":0,
@@ -247,7 +247,7 @@
                  "visible":true,
                  "width":30,
                  "x":770,
-                 "y":414
+                 "y":417.75
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -292,7 +292,7 @@
          "name":"Foreground collision",
          "objects":[
                 {
-                 "height":65,
+                 "height":55.6666666666667,
                  "id":12,
                  "name":"",
                  "rotation":0,
@@ -300,10 +300,10 @@
                  "visible":true,
                  "width":55,
                  "x":422,
-                 "y":160
+                 "y":169.333333333333
                 }, 
                 {
-                 "height":61,
+                 "height":55.3333333333334,
                  "id":13,
                  "name":"",
                  "rotation":0,
@@ -311,10 +311,10 @@
                  "visible":true,
                  "width":62,
                  "x":321,
-                 "y":324
+                 "y":329.666666666667
                 }, 
                 {
-                 "height":30,
+                 "height":16,
                  "id":16,
                  "name":"",
                  "properties":[
@@ -328,7 +328,7 @@
                  "visible":true,
                  "width":802,
                  "x":0,
-                 "y":613
+                 "y":627
                 }, 
                 {
                  "height":60,
@@ -349,11 +349,11 @@
                  "type":"",
                  "visible":true,
                  "width":156,
-                 "x":643,
-                 "y":132
+                 "x":643.666666666667,
+                 "y":129.333333333333
                 }, 
                 {
-                 "height":154,
+                 "height":159,
                  "id":19,
                  "name":"",
                  "rotation":0,
@@ -361,7 +361,7 @@
                  "visible":true,
                  "width":64,
                  "x":0,
-                 "y":258
+                 "y":253
                 }, 
                 {
                  "height":603,
@@ -393,8 +393,8 @@
                  "type":"",
                  "visible":true,
                  "width":29,
-                 "x":773,
-                 "y":420
+                 "x":770.75,
+                 "y":418.25
                 }],
          "opacity":1,
          "type":"objectgroup",

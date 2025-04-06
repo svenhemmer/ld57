@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="32">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="79">
  <editorsettings>
   <export target="lvl5.json" format="json"/>
  </editorsettings>
@@ -36,9 +36,9 @@
   <object id="19" x="22.0033" y="98.3333" width="22.6667" height="91.3333"/>
   <object id="20" x="196" y="28" width="49.3333" height="164"/>
   <object id="21" x="709.333" y="28" width="52" height="165.333"/>
-  <object id="23" x="833.333" y="190.667" width="769.333" height="33.3333"/>
+  <object id="23" x="833.333" y="192.667" width="769.333" height="31.3333"/>
   <object id="26" x="-4" y="0" width="1610.67" height="30.6667"/>
-  <object id="28" x="617.333" y="253.333" width="238.667" height="70.6667">
+  <object id="28" x="617.333" y="282.833" width="238.667" height="41.1667">
    <properties>
     <property name="Death" type="bool" value="true"/>
    </properties>
@@ -69,7 +69,7 @@
 </data>
  </layer>
  <objectgroup id="4" name="Middleground collision">
-  <object id="1" x="0" y="192" width="641.333" height="31"/>
+  <object id="1" x="0" y="193.5" width="641.333" height="29.5"/>
   <object id="2" x="1599" y="-2" width="37" height="227"/>
   <object id="3" x="-37" y="-6" width="37" height="228"/>
   <object id="12" x="1188" y="69.3333" width="54.6667" height="49.3333"/>
@@ -78,7 +78,7 @@
   <object id="17" x="468.003" y="97" width="22.6667" height="91.3333"/>
   <object id="24" x="833.333" y="192" width="769.333" height="32"/>
   <object id="25" x="-4" y="0" width="1610.67" height="30.6667"/>
-  <object id="27" x="617.333" y="253.333" width="238.667" height="70.6667">
+  <object id="27" x="617.333" y="282.833" width="238.667" height="41.1667">
    <properties>
     <property name="Death" type="bool" value="true"/>
    </properties>

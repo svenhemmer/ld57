@@ -156,7 +156,7 @@
                  "y":28
                 }, 
                 {
-                 "height":33.3333,
+                 "height":31.3333,
                  "id":23,
                  "name":"",
                  "rotation":0,
@@ -164,7 +164,7 @@
                  "visible":true,
                  "width":769.333,
                  "x":833.333,
-                 "y":190.667
+                 "y":192.667
                 }, 
                 {
                  "height":30.6667,
@@ -178,7 +178,7 @@
                  "y":0
                 }, 
                 {
-                 "height":70.6667,
+                 "height":41.1667,
                  "id":28,
                  "name":"",
                  "properties":[
@@ -192,7 +192,7 @@
                  "visible":true,
                  "width":238.667,
                  "x":617.333,
-                 "y":253.333
+                 "y":282.833
                 }, 
                 {
                  "height":16,
@@ -261,7 +261,7 @@
          "name":"Middleground collision",
          "objects":[
                 {
-                 "height":31,
+                 "height":29.5,
                  "id":1,
                  "name":"",
                  "rotation":0,
@@ -269,7 +269,7 @@
                  "visible":true,
                  "width":641.333,
                  "x":0,
-                 "y":192
+                 "y":193.5
                 }, 
                 {
                  "height":227,
@@ -360,7 +360,7 @@
                  "y":0
                 }, 
                 {
-                 "height":70.6667,
+                 "height":41.1667,
                  "id":27,
                  "name":"",
                  "properties":[
@@ -374,7 +374,7 @@
                  "visible":true,
                  "width":238.667,
                  "x":617.333,
-                 "y":253.333
+                 "y":282.833
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -383,7 +383,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":32,
+ "nextobjectid":79,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

@@ -26,7 +26,7 @@
 </data>
  </layer>
  <objectgroup id="4" name="Background collision">
-  <object id="1" x="0" y="287" width="158" height="104"/>
+  <object id="1" x="0" y="290" width="158" height="101"/>
   <object id="2" x="145" y="320" width="475" height="65"/>
   <object id="3" x="608" y="289" width="194" height="51"/>
   <object id="6" x="-43" y="27" width="42" height="303"/>
@@ -62,7 +62,7 @@
 </data>
  </layer>
  <objectgroup id="3" name="Foreground collision">
-  <object id="4" x="168" y="296" width="433" height="20">
+  <object id="4" x="168" y="306" width="433" height="10">
    <properties>
     <property name="Death" type="bool" value="true"/>
    </properties>
@@ -72,7 +72,7 @@
     <property name="Goal" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="11" x="0" y="287" width="158" height="104"/>
+  <object id="11" x="0" y="289.5" width="158" height="101.5"/>
   <object id="10" x="145" y="320" width="475" height="65"/>
   <object id="9" x="608" y="289" width="194" height="51"/>
   <object id="12" x="-43" y="27" width="42" height="303"/>

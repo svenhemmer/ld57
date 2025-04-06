@@ -60,11 +60,11 @@
   <object id="8" x="676" y="227" width="100" height="27">
    <polygon points="0,0 100,0 100,27 0,27"/>
   </object>
-  <object id="9" x="292" y="319" width="60" height="33">
-   <polygon points="0,0 60,0 60,33 0,33"/>
+  <object id="9" x="289" y="319" width="63" height="33">
+   <polygon points="0,0 63,0 63,33 0,33"/>
   </object>
-  <object id="10" x="17" y="511" width="238" height="28">
-   <polygon points="0,0 238,0 238,28 0,28"/>
+  <object id="10" x="17" y="514.25" width="237.5" height="24.75">
+   <polygon points="0,0 237.5,0 237.5,24.75 0,24.75"/>
   </object>
   <object id="11" x="134" y="481" width="56" height="32">
    <polygon points="0,0 56,0 56,32 0,32"/>
@@ -116,8 +116,8 @@
   <object id="35" x="-12" y="560" width="39" height="237">
    <polygon points="0,0 39,0 39,237 0,237"/>
   </object>
-  <object id="27" x="356" y="436" width="56" height="104"/>
-  <object id="29" x="419" y="292" width="59" height="59"/>
+  <object id="27" x="356" y="442" width="56" height="98"/>
+  <object id="29" x="419" y="295" width="59" height="56"/>
   <object id="62" x="40" y="745.333" width="18.6667" height="16">
    <properties>
     <property name="Start" type="bool" value="true"/>
@@ -171,8 +171,8 @@
  <objectgroup id="5" name="Foreground collision">
   <object id="25" x="301" y="641" width="40" height="130"/>
   <object id="26" x="141" y="569" width="30" height="111"/>
-  <object id="28" x="162" y="352" width="64" height="63"/>
-  <object id="30" x="548" y="254" width="59" height="64"/>
+  <object id="28" x="162" y="360" width="64" height="55"/>
+  <object id="30" x="548" y="266" width="59" height="52"/>
   <object id="31" x="711" y="254" width="41" height="107"/>
   <object id="32" x="497" y="33" width="27" height="106"/>
   <object id="33" x="271" y="127" width="33" height="107"/>
@@ -200,11 +200,11 @@
   <object id="53" x="676" y="227" width="100" height="27">
    <polygon points="0,0 100,0 100,27 0,27"/>
   </object>
-  <object id="52" x="292" y="319" width="60" height="33">
-   <polygon points="0,0 60,0 60,33 0,33"/>
+  <object id="52" x="288.667" y="320" width="63" height="33">
+   <polygon points="0,0 63,0 63,33 0,33"/>
   </object>
-  <object id="51" x="17" y="511" width="238" height="28">
-   <polygon points="0,0 238,0 238,28 0,28"/>
+  <object id="51" x="17" y="514" width="237.5" height="25">
+   <polygon points="0,0 237.5,0 237.5,25 0,25"/>
   </object>
   <object id="50" x="134" y="481" width="56" height="32">
    <polygon points="0,0 56,0 56,32 0,32"/>

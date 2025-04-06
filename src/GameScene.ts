@@ -56,7 +56,7 @@ export class GameScene extends Phaser.Scene {
                 if (rect.data?.values?.Plant) {
                     console.debug('found Plant → render sprite')
                     this.plantsPerLayer[i].push({
-                        plant: new Bitey(this, rect.x + rect.width / 2, rect.y + rect.height / 2)
+                        plant: new Bitey(this, rect.x + rect.width, rect.y + rect.height)
                     })
                 }
             }

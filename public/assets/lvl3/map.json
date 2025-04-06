@@ -29,7 +29,7 @@
          "name":"Middleground collision",
          "objects":[
                 {
-                 "height":28,
+                 "height":25.25,
                  "id":10,
                  "name":"",
                  "rotation":0,
@@ -37,7 +37,7 @@
                  "visible":true,
                  "width":644,
                  "x":-2.5625,
-                 "y":189
+                 "y":191.75
                 }, 
                 {
                  "height":232,
@@ -112,7 +112,7 @@
                  "y":166.667
                 }, 
                 {
-                 "height":10.6667,
+                 "height":6.66669999999999,
                  "id":22,
                  "name":"",
                  "properties":[
@@ -124,7 +124,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":10,
+                 "width":4,
                  "x":283.666666666667,
                  "y":173.999983333333
                 }],
@@ -183,7 +183,7 @@
                  "y":72
                 }, 
                 {
-                 "height":30,
+                 "height":27.25,
                  "id":6,
                  "name":"",
                  "rotation":0,
@@ -191,7 +191,7 @@
                  "visible":true,
                  "width":637,
                  "x":3,
-                 "y":189
+                 "y":191.75
                 }, 
                 {
                  "height":21.3333,
