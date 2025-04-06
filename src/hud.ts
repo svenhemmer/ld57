@@ -1,5 +1,5 @@
 import { GameScene } from "./GameScene";
-import { ShortcutInfo } from "./helpButton";
+import { ShortcutInfo } from "./ShortcutInfo";
 import { LayerIndicator } from "./LayerIndicator";
 
 export class Hud extends Phaser.Scene {
