@@ -63,6 +63,19 @@ export class GameScene extends Phaser.Scene {
         this.cameras.main.startFollow(this.hero!.sprite)
 
         this.scene.launch(Hud.name, { currentGameScene: this })
+
+        const bg = this.add.image(0, 0, 'bg')
+        bg.setOrigin(0)
+        const desiredHeight = this.layers[0].tilemapLayer.height + 700
+        const desiredWidth = this.layers[0].tilemapLayer.width + 700
+        const scaleFactor = Math.max(
+            desiredWidth / bg.width,
+            desiredHeight / bg.height
+        )
+        bg.setScale(scaleFactor)
+        bg.setX(-350)
+        bg.setY(-350)
+        bg.setDepth(-100)
     }
 
     computeLevelGoalBlurryness() {

@@ -1,5 +1,6 @@
 import { getGoal } from "../goal";
 import { getNextLevelInfoText, gotoNextLevel, wasLastLevel } from "../levels";
+import { getLoaderConvenience } from "../utils/loader";
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
 import { EndScene } from "./end.scene";
 
@@ -8,9 +9,12 @@ export class SuccessScene extends Phaser.Scene {
     super(SuccessScene.name);
   }
 
-  preload() {}
+  preload() {
+    getLoaderConvenience(this).prepareTextScene().getLoader().load(() => {})
+  }
 
   create() {
+    this.add.image(0, 0, 'bg').setOrigin(0)
     const centerX = this.cameras.main.centerX;
     const startY = this.cameras.main.centerY - 150; // Starting position (adjust as needed)
 

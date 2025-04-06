@@ -1,5 +1,6 @@
 import { getGoal } from "../goal";
 import { LevelGoal } from "../LevelGoal";
+import { getLoaderConvenience } from "../utils/loader";
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
 import { End2Scene } from "./end2.scene";
 
@@ -11,9 +12,11 @@ export class EndScene extends Phaser.Scene {
   preload() {
     console.debug('loading treasure')
     this.load.image('treasure', 'Treasure.png')
+    getLoaderConvenience(this).prepareTextScene().getLoader().load(() => {})
   }
 
   create() {
+    this.add.image(0, 0, 'bg').setOrigin(0)
     const centerX = this.cameras.main.centerX;
     const startY = this.cameras.main.centerY - 200; // Starting position (adjust as needed)
 

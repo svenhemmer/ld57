@@ -10,6 +10,7 @@ import { End2Scene } from './scenes/end2.scene.ts';
 import { AudioManagerScene } from './scenes/audio-manager.scene.ts';
 
 import { Hud } from './hud.ts';
+import { getLoaderConvenience } from './utils/loader.ts';
 // import { buttonStyleConfig } from './utils/text.utils.ts';
 
 class MainScene extends Phaser.Scene {
@@ -25,9 +26,11 @@ class MainScene extends Phaser.Scene {
       'fonts/' + file + '.png',
       'fonts/' + file + '.xml'
     );
+    getLoaderConvenience(this).prepareTextScene().getLoader().load(() => {})
   }
 
   create(): void {
+    this.add.image(0, 0, 'bg').setOrigin(0)
     const centerX = this.cameras.main.centerX;
     const startY = this.cameras.main.centerY - 100; // Starting position (adjust as needed)
 

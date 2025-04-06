@@ -55,7 +55,18 @@ export const getLoaderConvenience = (scene: Scene) => {
                 { name: "entry-gate-hovering", path: 'animations/gate.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
             ]);
 
+            loader.addImages([{
+                name: 'bg', path: 'background.png'
+            }])
+
             return obj;
+        },
+        prepareTextScene: () => {
+            console.debug('asd')
+            loader.addImages([{
+                name: 'bg', path: 'background.png'
+            }])
+            return obj
         },
         prepareLevel: (tileset: ImageDescription, jsonDescription: JsonTileMapDescription) => {
             loader.addImages([tileset]);

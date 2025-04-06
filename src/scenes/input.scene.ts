@@ -1,4 +1,5 @@
 import { getGoal, setGoal } from '../goal';
+import { getLoaderConvenience } from '../utils/loader';
 import { renderPressAnyKeyToContinue } from '../utils/text.utils';
 import { ControlsScene } from './controls.scene';
 
@@ -7,9 +8,12 @@ export class InputScene extends Phaser.Scene {
     super(InputScene.name);
   }
 
-  preload() {}
+  preload() {
+    getLoaderConvenience(this).prepareTextScene().getLoader().load(() => {})
+  }
 
   create() {
+    this.add.image(0, 0, 'bg').setOrigin(0)
     const centerX = this.cameras.main.centerX;
     const startY = this.cameras.main.centerY - 150; // Starting position (adjust as needed)
 

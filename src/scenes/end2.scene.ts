@@ -1,3 +1,4 @@
+import { getLoaderConvenience } from "../utils/loader";
 
 export class End2Scene extends Phaser.Scene {
   constructor() {
@@ -5,9 +6,11 @@ export class End2Scene extends Phaser.Scene {
   }
 
   preload() {
+    getLoaderConvenience(this).prepareTextScene().getLoader().load(() => {})
   }
 
   create() {
+    this.add.image(0, 0, 'bg').setOrigin(0)
     const centerX = this.cameras.main.centerX;
     const startY = this.cameras.main.centerY - 200; // Starting position (adjust as needed)
 
