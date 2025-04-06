@@ -47,13 +47,26 @@ export class GameScene extends Phaser.Scene {
         console.debug(this.layers![newLayer].collisionRects)
         this.currentLayerCollisions = this.physics.add.collider(this.hero!, this.layers![newLayer].collisionRects, (o1, o2) => {
             if (o2?.data?.values?.Goal) {
-                console.debug('Level finished!')
-                this.endLevel()
+                this.onPlayerReachesGoal()
+            }
+
+            if (o2?.data?.values?.Death) {
+                this.onPlayerDies()
             }
         })
         this.currentLayer = newLayer
 
         this.layerIndicator.update()
+    }
+
+    onPlayerReachesGoal() {
+        console.debug('Level finished!')
+        this.endLevel()
+    }
+
+    onPlayerDies() {
+        console.debug('Level you died!')
+        this.restartLevel()
     }
 
     zoomIn() {
@@ -93,6 +106,12 @@ export class GameScene extends Phaser.Scene {
         // TODO Show success screen?
 
         gotoNextLevel(this.scene)
+    }
+
+    restartLevel() {
+        // TODO Show failure screen?
+
+        this.scene.restart()
     }
 
     addCollisionLayer(tilemap: Phaser.Tilemaps.Tilemap, key: string) {

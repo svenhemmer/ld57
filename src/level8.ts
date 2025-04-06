@@ -1,21 +1,21 @@
 import { GameScene } from './GameScene';
 import { Hero } from './hero';
 
-export class Level7 extends GameScene {
+export class Level8 extends GameScene {
   constructor() {
-    super(Level7.name);
+    super(Level8.name);
   }
 
   preload(): void {
     this.load.image('base_tiles', 'tileset.png');
 
-    this.load.tilemapTiledJSON('lvl7', 'lvl7/map.json');
+    this.load.tilemapTiledJSON('lvl8', 'lvl8/map.json');
 
     this.load.image('hero', 'hero.png');
   }
 
   create(): void {
-    this.tilemap = this.make.tilemap({ key: 'lvl7' });
+    this.tilemap = this.make.tilemap({ key: 'lvl8' });
 
     const tileset = this.tilemap.addTilesetImage('tileset', 'base_tiles');
 
@@ -32,17 +32,12 @@ export class Level7 extends GameScene {
       tilemapLayer: bg,
       blurEffect: bg.postFX.addBlur(),
     });
-    const fg = this.tilemap.createLayer('Foreground', tileset, 0, 0)!;
-    this.layers.push({
-      name: 'foreground',
-      collisionRects: this.addCollisionLayer(this.tilemap, 'Foreground collision'),
-      tilemapLayer: fg,
-      blurEffect: fg.postFX.addBlur(),
-    });
+    
+    console.debug(bg.postFX, this.layers)
 
-    this.hero = new Hero(this, 100, 600);
+    this.hero = new Hero(this, 100, 250);
 
-    this.changeLayer(1);
+    this.changeLayer(0);
 
     super.create();
   }

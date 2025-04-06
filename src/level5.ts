@@ -23,6 +23,8 @@ export class Level5 extends GameScene {
       throw 'No tiles found';
     }
 
+    this.layers = []
+
     const mg = this.tilemap.createLayer('Middleground', tileset, 0, 0)!;
     this.layers.push({
       name: 'middleground',

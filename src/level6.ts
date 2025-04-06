@@ -23,6 +23,8 @@ export class Level6 extends GameScene {
       throw 'No tiles found';
     }
 
+    this.layers = []
+
     const vbg = this.tilemap.createLayer('Very Background', tileset, 0, 0)!;
     this.layers.push({
       name: 'verybackground',

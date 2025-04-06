@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="7">
+ <editorsettings>
+  <export target="map.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="128" columns="8">
+  <image source="../tileset.png" trans="ff00ff" width="256" height="512"/>
+ </tileset>
+ <layer id="1" name="Background" width="25" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,
+9,11,11,11,11,10,11,11,12,0,0,0,0,0,0,0,9,10,10,10,10,10,10,10,12,
+17,19,19,19,19,19,19,19,20,0,0,0,0,0,0,0,17,19,19,19,19,19,19,19,20,
+17,18,18,18,18,18,18,18,20,73,74,73,74,73,74,73,17,19,18,18,18,18,18,18,20
+</data>
+ </layer>
+ <objectgroup id="2" name="Background collision">
+  <object id="1" x="0" y="545" width="287" height="95"/>
+  <object id="2" x="513" y="542" width="285" height="98"/>
+  <object id="3" x="800" y="257" width="43" height="288"/>
+  <object id="4" x="-58" y="285" width="59" height="265"/>
+  <object id="5" x="289" y="613" width="224" height="29">
+   <properties>
+    <property name="Death" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" x="774" y="518" width="25" height="24">
+   <properties>
+    <property name="Goal" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
