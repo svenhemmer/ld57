@@ -48,7 +48,7 @@ export class GameScene extends Phaser.Scene {
             })
     }
 
-    playerPlants() {
+    placePlants() {
         this.plantsPerLayer = []
         for (let i = 0; i < this.layers.length; i++) {
             this.plantsPerLayer.push([])

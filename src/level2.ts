@@ -42,7 +42,7 @@ export class Level2 extends GameScene {
     });
 
     this.placePlayer()
-    this.playerPlants()
+    this.placePlants()
     this.changeLayer(0);
 
     super.create();
