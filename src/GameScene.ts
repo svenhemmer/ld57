@@ -1,4 +1,5 @@
 import { Hero } from './hero'
+import { gotoNextLevel } from './levels'
 
 type Layer = {
     name: string
@@ -36,7 +37,13 @@ export class GameScene extends Phaser.Scene {
         this.layers[newLayer].tilemapLayer.postFX.remove(this.layers[newLayer].blurEffect!)
 
         this.currentLayerCollisions?.destroy()
-        this.currentLayerCollisions = this.physics.add.collider(this.hero!, this.layers![newLayer].collisionRects)
+        console.debug(this.layers![newLayer].collisionRects)
+        this.currentLayerCollisions = this.physics.add.collider(this.hero!, this.layers![newLayer].collisionRects, (o1, o2) => {
+            if (o2?.data?.values?.Goal) {
+                console.debug('Level finished!')
+                this.endLevel()
+            }
+        })
         this.currentLayer = newLayer
     }
 
@@ -73,4 +80,26 @@ export class GameScene extends Phaser.Scene {
         })
     }
 
+    endLevel() {
+        // TODO Show success screen?
+
+        gotoNextLevel(this.scene)
+    }
+
+    addCollisionLayer(tilemap: Phaser.Tilemaps.Tilemap, key: string) {
+        return tilemap
+          .getObjectLayer(key)!
+          .objects.map((o) => {
+            const rect = this.add.rectangle(o.x!, o.y!, o.width!, o.height!);
+            if (o.properties) {
+              for (let { name, value } of o.properties) {
+                console.debug({ name, value })
+                rect.setData(name, value)
+              }
+            }
+            rect.setOrigin(0, 0);
+            return rect;
+          })
+          .map((rect) => this.physics.add.existing(rect, true));
+      };
 }

@@ -1,7 +1,7 @@
 import 'phaser';
 import './style.css';
 import { ControlsScene } from './scenes/controls.scene.ts';
-import { Level2 } from './level2';
+import { levels } from './levels.ts';
 // import { buttonStyleConfig } from './utils/text.utils.ts';
 
 class MainScene extends Phaser.Scene {
@@ -78,7 +78,7 @@ let configObject: Phaser.Types.Core.GameConfig = {
       gravity: { x: 0, y: 420 },
     },
   },
-  scene: [MainScene, ControlsScene, Level2],
+  scene: [MainScene, ControlsScene, ...levels],
 };
 
 new Phaser.Game(configObject);

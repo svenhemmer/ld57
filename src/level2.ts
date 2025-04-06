@@ -25,28 +25,17 @@ export class Level2 extends GameScene {
       throw 'No tiles found';
     }
 
-    const addCollisionLayer = (key: string) => {
-      return lvl2
-        .getObjectLayer(key)!
-        .objects.map((o) => {
-          const rect = this.add.rectangle(o.x!, o.y!, o.width!, o.height!);
-          rect.setOrigin(0, 0);
-          return rect;
-        })
-        .map((rect) => this.physics.add.existing(rect, true));
-    };
-
     const mg = lvl2.createLayer('Middleground', tileset, 0, 0)!;
     this.layers.push({
       name: 'middleground',
-      collisionRects: addCollisionLayer('Middleground collision'),
+      collisionRects: this.addCollisionLayer(lvl2, 'Middleground collision'),
       tilemapLayer: mg,
       blurEffect: mg.postFX.addBlur(),
     });
     const fg = lvl2.createLayer('Foreground', [tileset, tree_tileset], 0, 0)!;
     this.layers.push({
       name: 'foreground',
-      collisionRects: addCollisionLayer('Foreground collision'),
+      collisionRects: this.addCollisionLayer(lvl2, 'Foreground collision'),
       tilemapLayer: fg,
       blurEffect: fg.postFX.addBlur(),
     });

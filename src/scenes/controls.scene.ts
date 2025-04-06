@@ -1,4 +1,4 @@
-import { Level2 } from "../level2";
+import { gotoNextLevel } from "../levels";
 
 export class ControlsScene extends Phaser.Scene {
   constructor() {
@@ -41,6 +41,6 @@ export class ControlsScene extends Phaser.Scene {
   }
 
   goToNextScene() {
-    this.scene.start(Level2.name);
+    gotoNextLevel(this.scene)
   }
 }
