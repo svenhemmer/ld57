@@ -46,11 +46,12 @@ export class GameScene extends Phaser.Scene {
         this.currentLayerCollisions?.destroy()
         console.debug(this.layers![newLayer].collisionRects)
         this.currentLayerCollisions = this.physics.add.collider(this.hero!.sprite, this.layers![newLayer].collisionRects, (o1, o2) => {
-            if (o2?.data?.values?.Goal) {
+            const second = o2 as Phaser.Types.Physics.Arcade.GameObjectWithBody;
+            if (second.data?.values?.Goal) {
                 this.onPlayerReachesGoal()
             }
 
-            if (o2?.data?.values?.Death) {
+            if (second.data?.values?.Death) {
                 this.onPlayerDies()
             }
         })
