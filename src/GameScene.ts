@@ -12,6 +12,7 @@ type Layer = {
 }
 
 const zoomFactor = 1.1
+const defaultZoom = 1.5
 
 export class GameScene extends Phaser.Scene {
     layers: Layer[] = []
@@ -61,7 +62,7 @@ export class GameScene extends Phaser.Scene {
         this.currentLayer = newLayer
 
 
-        this.cameras.main.zoomEffect.start(1 * zoomFactor**this.currentLayer, 400)
+        this.cameras.main.zoomEffect.start(defaultZoom * zoomFactor**this.currentLayer, 400)
     }
 
     // 0 → 1
