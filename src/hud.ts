@@ -2,21 +2,27 @@ import { GameScene } from "./GameScene";
 import { HelpButton } from "./helpButton";
 import { LayerIndicator } from "./LayerIndicator";
 
-export class Hud {
-    private layerIndicator: LayerIndicator
-    private helpButton: HelpButton
+export class Hud extends Phaser.Scene {
+    private layerIndicator?: LayerIndicator
+    private helpButton?: HelpButton
+    private gameScene?: GameScene
 
-    constructor(scene: GameScene) {
-        this.layerIndicator = new LayerIndicator(scene)
-        this.helpButton = new HelpButton(scene)
+    constructor() { 
+        super(Hud.name)
+    }
+
+    init(data: any) {
+        this.gameScene = data.currentGameScene
+        this.layerIndicator = new LayerIndicator(this, this.gameScene!)
+        this.helpButton = new HelpButton(this, this.gameScene!)
     }
 
     create() {
-        this.helpButton.create()
+        this.helpButton?.create()
     }
 
     update() {
-        this.layerIndicator.update()
-        this.helpButton.update()
+        this.layerIndicator?.update()
+        this.helpButton?.update()
     }
 }

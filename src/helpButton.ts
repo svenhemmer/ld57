@@ -1,9 +1,11 @@
-import { GameScene } from "./GameScene";
 import { ControlsScene } from "./scenes/controls.scene";
+import { GameScene } from "./GameScene";
+import { Hud } from "./hud";
 
 
 export class HelpButton {
-    constructor(private scene: GameScene) {}
+    constructor(private scene: Phaser.Scene, private gameScene: GameScene) {
+    }
 
     create() {
         if (!this.scene.input.keyboard) {
@@ -12,8 +14,9 @@ export class HelpButton {
         const h = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.H)
         h.on('down', () => {
             // @ts-ignore
-            globalThis.previousScene = this.scene
-            this.scene.scene.switch(ControlsScene.name)
+            globalThis.previousScene = this.gameScene
+            this.scene.scene.setVisible(false, Hud.name)
+            this.gameScene.scene.switch(ControlsScene.name)
         })
     }
 

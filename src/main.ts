@@ -9,6 +9,7 @@ import { EndScene } from './scenes/end.scene.ts';
 import { End2Scene } from './scenes/end2.scene.ts';
 import { AudioManagerScene } from './scenes/audio-manager.scene.ts';
 
+import { Hud } from './hud.ts';
 // import { buttonStyleConfig } from './utils/text.utils.ts';
 
 class MainScene extends Phaser.Scene {
@@ -87,6 +88,7 @@ let configObject: Phaser.Types.Core.GameConfig = {
     InputScene,
     EndScene,
     End2Scene,
+    Hud,
     ...levels,
   ],
 };

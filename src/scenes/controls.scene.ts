@@ -1,3 +1,4 @@
+import { Hud } from "../hud";
 import { gotoNextLevel } from "../levels";
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
 
@@ -47,6 +48,7 @@ export class ControlsScene extends Phaser.Scene {
     if (globalThis.previousScene) {
       // @ts-ignore
       this.scene.switch(globalThis.previousScene)
+      this.scene.setVisible(true, Hud.name)
       // @ts-ignore
       globalThis.previousScene = undefined
       return

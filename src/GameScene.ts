@@ -11,27 +11,27 @@ type Layer = {
     blurEffect?: Phaser.FX.Blur
 }
 
+const zoomFactor = 1.1
+
 export class GameScene extends Phaser.Scene {
     layers: Layer[] = []
     tilemap?: Phaser.Tilemaps.Tilemap
     hero: Hero | null = null
-
-    private hud: Hud
 
     currentLayer: number = 1
     private currentLayerCollisions: Phaser.Physics.Arcade.Collider | null = null
 
     constructor(name: string) {
         super(name);
-        this.hud = new Hud(this)
     }
 
     create() {
         this.initControls()
-        this.hud.create()
 
         // this.cameras.main.setBounds(0, 0, this.tilemap!.widthInPixels, this.tilemap!.heightInPixels, true);
         this.cameras.main.startFollow(this.hero!.sprite)
+
+        this.scene.launch(Hud.name, { currentGameScene: this })
     }
 
     changeLayer(newLayer: number) {
@@ -60,8 +60,13 @@ export class GameScene extends Phaser.Scene {
         })
         this.currentLayer = newLayer
 
-        this.hud.update()
+
+        this.cameras.main.zoomEffect.start(1 * zoomFactor**this.currentLayer, 400)
     }
+
+    // 0 → 1
+    // 1 → 1 * factor
+    // 2 → 1 * factor * factor
 
     onPlayerReachesGoal() {
         console.debug('Level finished!')
@@ -112,6 +117,7 @@ export class GameScene extends Phaser.Scene {
     }
 
     endLevel() {
+        this.scene.stop(Hud.name)
         if (wasLastLevel()) {
             this.scene.start(EndScene.name)
             return
