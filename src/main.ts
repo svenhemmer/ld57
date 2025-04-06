@@ -75,7 +75,7 @@ let configObject: Phaser.Types.Core.GameConfig = {
     default: 'arcade',
     arcade: {
       debug: true,
-      gravity: { x: 0, y: 420 },
+      gravity: { x: 0, y: 450 },
     },
   },
   scene: [MainScene, ControlsScene, ...levels],

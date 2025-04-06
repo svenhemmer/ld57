@@ -42,7 +42,7 @@ export class Hero extends Phaser.GameObjects.Sprite {
     jump() {
         console.debug(this.body.velocity)
         if (this.body.velocity.y === 0) {
-            this.body.setVelocityY(-200);
+            this.body.setVelocityY(-270);
         }
     }
 
