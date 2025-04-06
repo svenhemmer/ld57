@@ -10,6 +10,7 @@ export class Bitey {
     constructor(scene: Phaser.Scene, x: number, y: number){
         this.scene = scene;
         this.sprite = scene.add.sprite(x, y, PLANT_WORDS.idle);
+        this.changeAnimation(PLANT_WORDS.idle)
         this.scene.add.existing(this.sprite);
         this.scene.physics.world.enableBody(this.sprite, 0);
         this.sprite.anims.play(PLANT_WORDS.idle, true);
