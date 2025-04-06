@@ -65,7 +65,7 @@ class MainScene extends Phaser.Scene {
 }
 
 let configObject: Phaser.Types.Core.GameConfig = {
-  backgroundColor: '#FFF',
+  backgroundColor: 0xfdcbb0,
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
