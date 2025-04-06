@@ -7,6 +7,8 @@ import { renderPressAnyKeyToContinue } from './utils/text.utils.ts';
 import { InputScene } from './scenes/input.scene.ts';
 import { EndScene } from './scenes/end.scene.ts';
 import { End2Scene } from './scenes/end2.scene.ts';
+import { AudioManagerScene } from './scenes/audio-manager.scene.ts';
+
 // import { buttonStyleConfig } from './utils/text.utils.ts';
 
 class MainScene extends Phaser.Scene {
@@ -17,7 +19,11 @@ class MainScene extends Phaser.Scene {
   preload(): void {
     // this.load.font('Bitfont', '/fonts/Bitfont.ttf', 'truetype');
     let file = 'Bitfont1';
-    this.load.bitmapFont('our-own-pixelfont', 'fonts/' + file + '.png', 'fonts/' + file + '.xml');
+    this.load.bitmapFont(
+      'our-own-pixelfont',
+      'fonts/' + file + '.png',
+      'fonts/' + file + '.xml'
+    );
   }
 
   create(): void {
@@ -25,11 +31,12 @@ class MainScene extends Phaser.Scene {
     const startY = this.cameras.main.centerY - 100; // Starting position (adjust as needed)
 
     const title = this.add.bitmapText(
-        centerX,
-        startY,
-        'our-own-pixelfont',
-        "DEPTH OF FIELD",
-        64); 
+      centerX,
+      startY,
+      'our-own-pixelfont',
+      'DEPTH OF FIELD',
+      64
+    );
     // const title = this.add.text(
     //   centerX,
     //   startY,
@@ -38,7 +45,7 @@ class MainScene extends Phaser.Scene {
     // );
     title.setOrigin();
 
-    renderPressAnyKeyToContinue(this, centerX, startY + title.height + 100)
+    renderPressAnyKeyToContinue(this, centerX, startY + title.height + 100);
 
     this.input.on('pointerdown', () => this.goToFirstScene());
     this.input.keyboard?.on('keydown', () => this.goToFirstScene());
@@ -61,17 +68,27 @@ let configObject: Phaser.Types.Core.GameConfig = {
     parent: 'thegame',
     width: 800,
     height: 600,
-    zoom: 4
+    zoom: 4,
   },
   pixelArt: true,
   physics: {
     default: 'arcade',
     arcade: {
-    //   debug: true,
+      //   debug: true,
       gravity: { x: 0, y: 450 },
     },
   },
-  scene: [MainScene, ControlsScene, SuccessScene, InputScene, EndScene, End2Scene, ...levels],
+  audio: { disableWebAudio: false },
+  scene: [
+    MainScene,
+    AudioManagerScene,
+    ControlsScene,
+    SuccessScene,
+    InputScene,
+    EndScene,
+    End2Scene,
+    ...levels,
+  ],
 };
 
 new Phaser.Game(configObject);
