@@ -18,9 +18,7 @@ export class ShortcutInfo {
             this.scene.scene.setVisible(false, Hud.name)
             this.gameScene.scene.switch(ControlsScene.name)
         })
-    }
 
-    update() {
         const text = this.scene.add.bitmapText(
             50,
             this.scene.scale.height - 100,
@@ -38,5 +36,9 @@ export class ShortcutInfo {
             24
         )
         text2.setScrollFactor(0)
+    }
+
+    update() {
+        
     }
 }
