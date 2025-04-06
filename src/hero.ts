@@ -10,6 +10,8 @@ export class Hero {
     speed = 200;
     jumping = false;
 
+    runSound;
+
     constructor(scene: Phaser.Scene, x: number, y: number){
 
         this.scene = scene;
@@ -17,9 +19,12 @@ export class Hero {
         this.scene.add.existing(this.sprite);
         this.scene.physics.world.enableBody(this.sprite, 0);
         this.sprite.anims.play(HERO_WORDS.spawn, true);
+        scene.sound.play('sound_spawn', { rate: 2 });
+        this.runSound = scene.sound.add('sound_run');
+        this.runSound.setLoop(true);
         this.sprite.on('animationcomplete', () => { 
             this.ready = true;
-            this.changeAnimation(HERO_WORDS.run);
+            this.changeAnimation(HERO_WORDS.idle);
         })
 
         console.log(this.sprite.anims)
@@ -56,6 +61,7 @@ export class Hero {
         if (this.sprite.body!.velocity.y === 0) {
             this.sprite.body!.velocity.y = -270;
             this.jumping = true;
+            this.scene.sound.play('sound_jump', { rate: 2 })
         }
     }
 
@@ -74,6 +80,16 @@ export class Hero {
     changeAnimation(which: string) {
         if (this.jumping) { 
             return;
+        }
+        if (this.sprite.anims.currentAnim?.key === which) {
+            return;
+        }
+        if (which === HERO_WORDS.run) {
+            if (!this.runSound.isPlaying) {
+                this.runSound.play();
+            }
+        } else {
+            this.runSound.stop();
         }
         this.sprite.anims.play(which, true);
     }

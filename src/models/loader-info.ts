@@ -26,7 +26,8 @@ export type SpriteSheetDescription = {
 export type SoundDescription = {
     path: string;
     name: string;
-    format: 'mp3' | 'wav';
+    format?: 'mp3' | 'wav';
+    rate?: number; 
 }
 
 export type MusicDescription = {

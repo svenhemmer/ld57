@@ -45,6 +45,7 @@ export const getLoaderConvenience = (scene: Scene) => {
     const obj = {
         initLoader: () => {        
             heroConvenience.addImagesToLoader(loader);
+            heroConvenience.addSoundFx(loader);
             return obj;
         },
         prepareLevel: (tileset: ImageDescription, jsonDescription: JsonTileMapDescription) => {

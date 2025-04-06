@@ -62,5 +62,13 @@ export const heroConvenience = {
             { name: HERO_WORDS.spawn, path: 'animations/bob_spawn.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
             { name: HERO_WORDS.die, path: 'animations/bob_die.png', frameDimensions: { frameHeight: 32, frameWidth: 32} }
         ]);
+    },
+    addSoundFx: ( loader: Loader ) => {
+        loader.addSoundFx([
+            { name: 'sound_run', path: 'fx/run.wav', format: 'wav' },
+            { name: 'sound_die', path: 'fx/die.wav', format: 'wav' },
+            { name: 'sound_jump', path: 'fx/jump.wav', format: 'wav' },
+            { name: 'sound_spawn', path: 'fx/spawn.wav', format: 'wav' }
+        ]);
     }
 }
