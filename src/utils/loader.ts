@@ -1,6 +1,7 @@
 import { Scene } from "phaser";
 import { Loader } from "phaser";
 import type { ImageDescription, MusicDescription, SoundDescription, JsonTileMapDescription } from "../models/loader-info";
+import { heroConvenience } from "./hero-convenience";
 
 export const createLoader = (scene: Scene) => {
 
@@ -33,6 +34,7 @@ export const createLoader = (scene: Scene) => {
     }
 }
 
-export const getLoaderConvenience = {
-    loader
+export const getLoaderConvenience = (scene: Scene) => {
+    const loader = createLoader(scene);
+    heroConvenience.addImagesToLoader(loader);
 }
