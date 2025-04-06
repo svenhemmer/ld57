@@ -1,4 +1,5 @@
 import { GameScene } from './GameScene';
+import { getAnimatorConvenience } from './utils/animator';
 import { getLoaderConvenience } from './utils/loader';
 
 export class Level5 extends GameScene {
@@ -14,7 +15,7 @@ export class Level5 extends GameScene {
   }
 
   create(): void {
-    getLoaderConvenience(this);
+    getAnimatorConvenience(this);
     this.tilemap = this.make.tilemap({ key: 'lvl5' });
 
     const tileset = this.tilemap.addTilesetImage('tileset', 'base_tiles');

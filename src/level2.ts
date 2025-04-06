@@ -1,5 +1,4 @@
 import { GameScene } from './GameScene';
-import { Bitey } from './plant';
 import { getAnimatorConvenience } from './utils/animator';
 import { getLoaderConvenience } from './utils/loader';
 

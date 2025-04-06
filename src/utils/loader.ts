@@ -63,7 +63,6 @@ export const getLoaderConvenience = (scene: Scene) => {
             return obj;
         },
         prepareTextScene: () => {
-            console.debug('asd')
             loader.addImages([{
                 name: 'bg', path: 'background.png'
             }])
