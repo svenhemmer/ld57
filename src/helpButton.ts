@@ -3,7 +3,7 @@ import { GameScene } from "./GameScene";
 import { Hud } from "./hud";
 
 
-export class HelpButton {
+export class ShortcutInfo {
     constructor(private scene: Phaser.Scene, private gameScene: GameScene) {
     }
 
@@ -29,5 +29,14 @@ export class HelpButton {
             24
         )
         text.setScrollFactor(0)
+
+        const text2 = this.scene.add.bitmapText(
+            350,
+            this.scene.scale.height - 100,
+            'our-own-pixelfont',
+            "PRESS M\nTO MUTE SOUND",
+            24
+        )
+        text2.setScrollFactor(0)
     }
 }
