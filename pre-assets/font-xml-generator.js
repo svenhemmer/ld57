@@ -14,7 +14,7 @@ let fileResult = `
 <?xml version="1.0"?>
     <font>
         <info face="${fileName}" size="10"/>
-        <common lineHeight="8" base="10" scaleW="6" scaleH="8" pages="1" packed="0"/>    
+        <common lineHeight="14" base="10" scaleW="6" scaleH="8" pages="1" packed="0"/>    
         <pages>
             <page id="0" file="${fileName}"/>
         </pages>
@@ -24,6 +24,9 @@ let fileResult = `
 const chars = [
     ...range(65, 90),
     ...range(48, 57),
+    63, // ?
+    33, // !
+    46, // .
     32, // space
 ]
 
