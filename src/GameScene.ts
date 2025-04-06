@@ -28,7 +28,7 @@ export class GameScene extends Phaser.Scene {
         this.initControls()
 
         // this.cameras.main.setBounds(0, 0, this.tilemap!.widthInPixels, this.tilemap!.heightInPixels, true);
-        this.cameras.main.startFollow(this.hero!)
+        this.cameras.main.startFollow(this.hero!.sprite)
     }
 
     changeLayer(newLayer: number) {
@@ -45,7 +45,7 @@ export class GameScene extends Phaser.Scene {
 
         this.currentLayerCollisions?.destroy()
         console.debug(this.layers![newLayer].collisionRects)
-        this.currentLayerCollisions = this.physics.add.collider(this.hero!, this.layers![newLayer].collisionRects, (o1, o2) => {
+        this.currentLayerCollisions = this.physics.add.collider(this.hero!.sprite, this.layers![newLayer].collisionRects, (o1, o2) => {
             if (o2?.data?.values?.Goal) {
                 this.onPlayerReachesGoal()
             }

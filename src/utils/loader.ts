@@ -28,7 +28,7 @@ export const createLoader = (scene: Scene) => {
             let numLoaded = 0;
             for (let fc of loadFunctions) {
                 fc();
-                callback(numLoaded++);
+                callback(100*++numLoaded/loadFunctions.length);
             }
         }       
     }
@@ -46,8 +46,6 @@ export const getLoaderConvenience = (scene: Scene) => {
         prepareLevel: (tileset: ImageDescription, jsonDescription: JsonTileMapDescription) => {
             loader.addImages([tileset]);
             loader.addMapDescriptions([jsonDescription]);
-            // TODO: Remove after adding animation
-            loader.addImages([{ name: 'hero', path: 'hero.png' }]);
             return obj;
         },
         getLoader: () => loader

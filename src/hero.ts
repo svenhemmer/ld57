@@ -1,19 +1,20 @@
 import 'phaser';
+import { HERO_WORDS, TEXTURE_POSTFIX } from './utils/hero-convenience';
 
-export class Hero extends Phaser.GameObjects.Sprite {
+export class Hero {
     
-    declare body: Phaser.Physics.Arcade.Body
+    scene: Phaser.Scene;
+    sprite: Phaser.GameObjects.Sprite;
 
     constructor(scene: Phaser.Scene, x: number, y: number){
 
-        super(scene, x, y, 'hero');
-
         this.scene = scene;
-        this.scene.add.existing(this);
-        this.scene.physics.world.enableBody(this, 0);
-        this.setData("speed", 200);
+        this.sprite = scene.add.sprite(x, y, HERO_WORDS.spawn + TEXTURE_POSTFIX);
+        this.scene.add.existing(this.sprite);
+        this.scene.physics.world.enableBody(this.sprite, 0);
+        this.scene.physics.world
+        this.sprite.setData("speed", 200);
 
-        this.scene.add.existing(this);
 
         if (!this.scene.input.keyboard) {
             return
@@ -40,24 +41,24 @@ export class Hero extends Phaser.GameObjects.Sprite {
     }
 
     jump() {
-        console.debug(this.body.velocity)
-        if (this.body.velocity.y === 0) {
-            this.body.setVelocityY(-270);
+        console.debug(this.sprite.body!.velocity)
+        if (this.sprite.body!.velocity.y === 0) {
+            this.sprite.body!.velocity.y = -270;
         }
     }
 
     moveLeft() {
-        this.body.velocity.x = -this.getData("speed");
+        this.sprite.body!.velocity.x = -this.sprite.getData("speed");
     }
     
     moveRight() {
-        this.body.velocity.x = this.getData("speed");
+        this.sprite.body!.velocity.x = this.sprite.getData("speed");
     }
 
     update() {
-        if (this.body.velocity.y === 0) {
+        if (this.sprite.body!.velocity.y === 0) {
             // While standing on the ground, reset horizontal velocity to zero (if user presses arrow keys, it will be set to another value in `this.controls` anyway)
-            this.body.setVelocityX(0)
+            this.sprite.body!.velocity.y = 0
         }
 
         this.controls();
