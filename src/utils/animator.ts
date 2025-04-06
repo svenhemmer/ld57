@@ -1,6 +1,7 @@
 import { Scene } from "phaser";
 import { AnimationDescription } from "../models/animator-info";
 import { HERO_ANIMATION_DESCRIPTIONS } from "./hero-convenience";
+import { LEVEL_GOAL_HOVERING } from "../LevelGoal";
 
 export const animator = (scene: Scene) => {
     return {
@@ -24,4 +25,6 @@ export const getAnimatorConvenience = (scene: Scene) => {
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.run);
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.spawn);
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.die);
+
+    anim.createAnimation(LEVEL_GOAL_HOVERING)
 }

@@ -3,6 +3,7 @@ import { wasLastLevel } from './levels'
 import { EndScene } from './scenes/end.scene'
 import { SuccessScene } from './scenes/success.scene'
 import { Hud } from './hud'
+import { LevelGoal } from './LevelGoal'
 
 type Layer = {
     name: string
@@ -27,13 +28,38 @@ export class GameScene extends Phaser.Scene {
         super(name);
     }
 
+    levelGoal?: LevelGoal
+    levelGoalLayer: number = 0
+    levelGoalBlurEffect?: Phaser.FX.Blur
+
     create() {
+        for (let i = 0; i < this.layers.length; i++) {
+            for (let rect of this.layers[i].collisionRects) {
+                if (rect.data?.values?.Goal) {
+                    console.debug('found goal → render sprite')
+                    this.levelGoal = new LevelGoal(this.scene.scene, rect.x + rect.width / 2, rect.y + rect.height / 2)
+                    this.levelGoalLayer = i
+                }
+            }
+        }
+        this.computeLevelGoalBlurryness()
+        
         this.initControls()
 
         // this.cameras.main.setBounds(0, 0, this.tilemap!.widthInPixels, this.tilemap!.heightInPixels, true);
         this.cameras.main.startFollow(this.hero!.sprite)
 
         this.scene.launch(Hud.name, { currentGameScene: this })
+    }
+
+    computeLevelGoalBlurryness() {
+        console.debug(this.currentLayer, this.levelGoalLayer)
+        if (this.currentLayer !== this.levelGoalLayer) {
+            this.levelGoalBlurEffect = this.levelGoal?.sprite?.postFX?.addBlur()
+        }
+        else if (this.levelGoalBlurEffect) {
+            this.levelGoal?.sprite?.postFX?.remove(this.levelGoalBlurEffect)
+        }
     }
 
     changeLayer(newLayer: number) {
@@ -61,6 +87,8 @@ export class GameScene extends Phaser.Scene {
             }
         })
         this.currentLayer = newLayer
+
+        this.computeLevelGoalBlurryness()
 
         this.onLayerChange()
         this.cameras.main.zoomEffect.start(defaultZoom * zoomFactor**this.currentLayer, 400)

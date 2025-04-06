@@ -1,4 +1,5 @@
 import { getGoal } from "../goal";
+import { LevelGoal } from "../LevelGoal";
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
 import { End2Scene } from "./end2.scene";
 
@@ -43,12 +44,13 @@ export class EndScene extends Phaser.Scene {
     text3.setOrigin();
     text3.setTintFill(0xf04f78)
 
-    const treasure = this.add.image(
+    const treasure = new LevelGoal(
+      this,
       centerX,
-      startY + 250,
-      "treasure"
+      startY + 250
     )
-    treasure.postFX.addBlur(0, 2, 2, 5)
+    treasure.sprite.setScale(4)
+    treasure.sprite.postFX.addBlur(0, 2, 2, 5)
 
     setTimeout(() => {
       renderPressAnyKeyToContinue(this, centerX, startY + 400)

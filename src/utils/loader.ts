@@ -46,6 +46,11 @@ export const getLoaderConvenience = (scene: Scene) => {
         initLoader: () => {        
             heroConvenience.addImagesToLoader(loader);
             heroConvenience.addSoundFx(loader);
+
+            loader.addSpriteSheet([
+                { name: "hovering", path: 'animations/goal_hovering.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            ]);
+
             return obj;
         },
         prepareLevel: (tileset: ImageDescription, jsonDescription: JsonTileMapDescription) => {

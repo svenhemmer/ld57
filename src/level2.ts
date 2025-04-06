@@ -44,7 +44,7 @@ export class Level2 extends GameScene {
 
     this.hero = new Hero(this, 100, 50);
 
-    this.changeLayer(1);
+    this.changeLayer(0);
 
     super.create();
   }
