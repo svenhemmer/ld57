@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="24">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="36">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -11,7 +11,7 @@
 18,18,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
 18,18,18,0,0,39,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
 19,18,18,0,0,47,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,19,19,19,19,0,0,0,17,
-18,18,18,18,18,18,18,18,18,0,0,0,0,0,0,0,18,0,0,0,0,0,0,0,18,0,0,0,0,0,0,0,19,0,0,0,0,0,0,0,0,0,33,34,0,0,0,0,0,18,
+18,18,18,18,18,18,18,18,18,0,0,0,0,0,0,0,18,0,9,10,11,11,12,0,18,0,9,11,10,11,12,0,19,0,0,0,0,0,0,0,0,0,33,34,0,0,0,0,0,18,
 20,0,41,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,58,0,0,0,0,9,18,
 20,0,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,18,
 20,0,57,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,11,18,18,
@@ -50,6 +50,58 @@
   <object id="23" x="40.6667" y="233" width="18.6667" height="16">
    <properties>
     <property name="Start" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="24" x="712" y="72.6667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="25" x="685" y="73.6667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="26" x="651" y="74" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="27" x="618.333" y="74" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="28" x="586.333" y="74.3333" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="29" x="577" y="96" width="157.667" height="32.3333"/>
+  <object id="30" x="832.667" y="98" width="158" height="30.6667"/>
+  <object id="31" x="844.333" y="82" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="32" x="879.667" y="82.6667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="33" x="907" y="78" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="34" x="937" y="80.6667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="35" x="969.667" y="78.6667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>

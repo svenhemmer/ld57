@@ -50,7 +50,7 @@
                  "y":544
                 }, 
                 {
-                 "height":60,
+                 "height":55.6666666666666,
                  "id":2,
                  "name":"",
                  "rotation":0,
@@ -58,18 +58,18 @@
                  "visible":true,
                  "width":59,
                  "x":580,
-                 "y":450
+                 "y":454.333333333333
                 }, 
                 {
-                 "height":258,
+                 "height":254,
                  "id":3,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":30,
-                 "x":771,
-                 "y":382
+                 "width":30.5,
+                 "x":770.5,
+                 "y":386
                 }, 
                 {
                  "height":29,
@@ -89,7 +89,7 @@
                  "y":352
                 }, 
                 {
-                 "height":29,
+                 "height":16.75,
                  "id":6,
                  "name":"",
                  "properties":[
@@ -103,7 +103,7 @@
                  "visible":true,
                  "width":570,
                  "x":232,
-                 "y":612
+                 "y":624.25
                 }, 
                 {
                  "height":287,
@@ -141,7 +141,7 @@
                  "type":"",
                  "visible":true,
                  "width":18.6667,
-                 "x":52.66665,
+                 "x":52.6667,
                  "y":516
                 }],
          "opacity":1,
@@ -187,7 +187,7 @@
          "name":"Foreground collision",
          "objects":[
                 {
-                 "height":62,
+                 "height":57.3333333333334,
                  "id":5,
                  "name":"",
                  "rotation":0,
@@ -195,10 +195,10 @@
                  "visible":true,
                  "width":58,
                  "x":355,
-                 "y":514
+                 "y":518.666666666667
                 }, 
                 {
-                 "height":29,
+                 "height":16.25,
                  "id":7,
                  "name":"",
                  "properties":[
@@ -210,9 +210,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":570,
-                 "x":232,
-                 "y":612
+                 "width":569.25,
+                 "x":232.75,
+                 "y":624.75
                 }, 
                 {
                  "height":95,
@@ -226,15 +226,15 @@
                  "y":544
                 }, 
                 {
-                 "height":258,
+                 "height":255,
                  "id":12,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":30,
-                 "x":771,
-                 "y":382
+                 "width":31,
+                 "x":770,
+                 "y":385
                 }, 
                 {
                  "height":287,

@@ -112,7 +112,7 @@
                  "y":68.5
                 }, 
                 {
-                 "height":34.3333,
+                 "height":28.5833,
                  "id":18,
                  "name":"",
                  "rotation":0,
@@ -120,7 +120,7 @@
                  "visible":true,
                  "width":54.6667,
                  "x":7.33332,
-                 "y":85.3333
+                 "y":91.0833
                 }, 
                 {
                  "height":91.3333,
@@ -156,7 +156,7 @@
                  "y":28
                 }, 
                 {
-                 "height":33.3333,
+                 "height":31.3333,
                  "id":23,
                  "name":"",
                  "rotation":0,
@@ -164,7 +164,7 @@
                  "visible":true,
                  "width":769.333,
                  "x":833.333,
-                 "y":190.667
+                 "y":192.667
                 }, 
                 {
                  "height":30.6667,
@@ -178,7 +178,7 @@
                  "y":0
                 }, 
                 {
-                 "height":70.6667,
+                 "height":41.1667,
                  "id":28,
                  "name":"",
                  "properties":[
@@ -192,7 +192,7 @@
                  "visible":true,
                  "width":238.667,
                  "x":617.333,
-                 "y":253.333
+                 "y":282.833
                 }, 
                 {
                  "height":16,
@@ -208,8 +208,25 @@
                  "type":"",
                  "visible":true,
                  "width":18.6667,
-                 "x":27.66665,
+                 "x":27.6667,
                  "y":59
+                }, 
+                {
+                 "height":10.6667,
+                 "id":31,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"Plant",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":10,
+                 "x":1165,
+                 "y":169.66665
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -244,7 +261,7 @@
          "name":"Middleground collision",
          "objects":[
                 {
-                 "height":31,
+                 "height":29.5,
                  "id":1,
                  "name":"",
                  "rotation":0,
@@ -252,7 +269,7 @@
                  "visible":true,
                  "width":641.333,
                  "x":0,
-                 "y":192
+                 "y":193.5
                 }, 
                 {
                  "height":227,
@@ -343,7 +360,7 @@
                  "y":0
                 }, 
                 {
-                 "height":70.6667,
+                 "height":41.1667,
                  "id":27,
                  "name":"",
                  "properties":[
@@ -357,7 +374,7 @@
                  "visible":true,
                  "width":238.667,
                  "x":617.333,
-                 "y":253.333
+                 "y":282.833
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -366,7 +383,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":31,
+ "nextobjectid":79,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

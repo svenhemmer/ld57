@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="24">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="27">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -21,7 +21,7 @@
 11,12,37,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 18,18,45,46,0,0,0,0,0,0,0,0,0,0,0,0,35,36,0,0,0,0,0,0,0,
 27,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,44,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,36,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,36,9,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,44,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,36,0,0,0,0,0,
 0,0,0,0,0,0,0,0,35,36,0,0,0,0,0,0,0,0,43,44,0,0,0,0,0,
@@ -31,20 +31,20 @@
 </data>
  </layer>
  <objectgroup id="2" name="Background collision">
-  <object id="1" x="0" y="613" width="802" height="30">
+  <object id="1" x="0" y="626.5" width="802" height="16.5">
    <properties>
     <property name="Death" type="bool" value="true"/>
    </properties>
   </object>
   <object id="2" x="-1" y="546" width="161" height="60"/>
-  <object id="3" x="643" y="132" width="156" height="58"/>
-  <object id="4" x="0" y="324" width="64" height="88"/>
-  <object id="5" x="258" y="516" width="61" height="61"/>
-  <object id="6" x="416" y="542" width="65" height="66"/>
-  <object id="7" x="578" y="480" width="59" height="63"/>
-  <object id="8" x="706" y="420" width="64" height="60"/>
-  <object id="9" x="518" y="357" width="54" height="59"/>
-  <object id="10" x="71" y="323" width="55" height="60"/>
+  <object id="3" x="642.333" y="130" width="156" height="58"/>
+  <object id="4" x="0" y="321.667" width="64" height="90.3333"/>
+  <object id="5" x="258" y="524.5" width="61" height="52.5"/>
+  <object id="6" x="416" y="554" width="65" height="54"/>
+  <object id="7" x="578" y="491.5" width="59" height="51.5"/>
+  <object id="8" x="706" y="426" width="64" height="54"/>
+  <object id="9" x="518" y="362" width="54" height="54"/>
+  <object id="10" x="71" y="329" width="55" height="54"/>
   <object id="11" x="194" y="201" width="57" height="53"/>
   <object id="14" x="-45" y="27" width="46" height="603"/>
   <object id="15" x="801" y="20" width="43" height="624"/>
@@ -58,6 +58,12 @@
     <property name="Start" type="bool" value="true"/>
    </properties>
   </object>
+  <object id="24" x="777" y="405.667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="25" x="770" y="417.75" width="30" height="29.25"/>
  </objectgroup>
  <layer id="3" name="Foreground" width="25" height="20">
   <data encoding="csv">
@@ -84,17 +90,18 @@
 </data>
  </layer>
  <objectgroup id="4" name="Foreground collision">
-  <object id="12" x="422" y="160" width="55" height="65"/>
-  <object id="13" x="321" y="324" width="62" height="61"/>
-  <object id="16" x="0" y="613" width="802" height="30">
+  <object id="12" x="422" y="169.333" width="55" height="55.6667"/>
+  <object id="13" x="321" y="329.667" width="62" height="55.3333"/>
+  <object id="16" x="0" y="627" width="802" height="16">
    <properties>
     <property name="Death" type="bool" value="true"/>
    </properties>
   </object>
   <object id="18" x="-1" y="546" width="161" height="60"/>
-  <object id="20" x="643" y="132" width="156" height="58"/>
-  <object id="19" x="0" y="258" width="64" height="154"/>
+  <object id="20" x="643.667" y="129.333" width="156" height="58"/>
+  <object id="19" x="0" y="253" width="64" height="159"/>
   <object id="17" x="-45" y="27" width="46" height="603"/>
   <object id="21" x="801" y="20" width="43" height="624"/>
+  <object id="26" x="770.75" y="418.25" width="29" height="28"/>
  </objectgroup>
 </map>

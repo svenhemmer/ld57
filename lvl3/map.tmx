@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="21">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="23">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -21,7 +21,7 @@
 </data>
  </layer>
  <objectgroup id="3" name="Middleground collision">
-  <object id="10" x="-2.5625" y="189" width="644" height="28"/>
+  <object id="10" x="-2.5625" y="191.75" width="644" height="25.25"/>
   <object id="14" x="-24" y="-6.66667" width="24" height="232"/>
   <object id="15" x="641.333" y="-4.66667" width="24" height="232"/>
   <object id="16" x="373.667" y="88" width="18" height="100"/>
@@ -30,6 +30,11 @@
   <object id="20" x="7.33332" y="166.667" width="18.6667" height="16">
    <properties>
     <property name="Start" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="22" x="283.667" y="174" width="4" height="6.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>
@@ -50,7 +55,7 @@
  <objectgroup id="4" name="Foreground collision">
   <object id="3" x="182.667" y="90.6667" width="18" height="100"/>
   <object id="4" x="164.667" y="72" width="58" height="52"/>
-  <object id="6" x="3" y="189" width="637" height="30"/>
+  <object id="6" x="3" y="191.75" width="637" height="27.25"/>
   <object id="11" x="615.333" y="136" width="23.3333" height="21.3333">
    <properties>
     <property name="Goal" type="bool" value="true"/>
