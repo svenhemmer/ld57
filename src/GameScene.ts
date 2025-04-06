@@ -1,4 +1,5 @@
 import { Hero } from './hero'
+import { LayerIndicator } from './LayerIndicator'
 import { gotoNextLevel } from './levels'
 
 type Layer = {
@@ -13,12 +14,14 @@ export class GameScene extends Phaser.Scene {
     tilemap?: Phaser.Tilemaps.Tilemap
     hero: Hero | null = null
 
+    private layerIndicator: LayerIndicator
 
-    private currentLayer: number = 1
+    currentLayer: number = 1
     private currentLayerCollisions: Phaser.Physics.Arcade.Collider | null = null
 
     constructor(name: string) {
         super(name);
+        this.layerIndicator = new LayerIndicator(this)
     }
 
     create() {
@@ -49,6 +52,8 @@ export class GameScene extends Phaser.Scene {
             }
         })
         this.currentLayer = newLayer
+
+        this.layerIndicator.update()
     }
 
     zoomIn() {

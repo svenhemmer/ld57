@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="7" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="25">
+ <editorsettings>
+  <export target="map.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="128" columns="8">
+  <image source="../tileset.png" trans="ff00ff" width="256" height="512"/>
+ </tileset>
+ <layer id="4" name="Very Background" width="25" height="7">
+  <data encoding="csv">
+25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,26,27,25,25,25,25,25,25,26,27,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,
+9,9,10,11,12,9,10,11,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12
+</data>
+ </layer>
+ <objectgroup id="5" name="Very Background collision">
+  <object id="17" x="2.5" y="191.5" width="800" height="38"/>
+  <object id="18" x="802.5" y="-4.5" width="35" height="233"/>
+  <object id="19" x="-25.5" y="-9.5" width="26" height="238"/>
+  <object id="20" x="1.5" y="3.5" width="802" height="34"/>
+  <object id="24" x="778" y="160" width="22" height="30">
+   <properties>
+    <property name="Goal" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="Background" width="25" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,35,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,43,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,51,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,59,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="6" name="Background collision">
+  <object id="13" x="2.5" y="190.5" width="800" height="38"/>
+  <object id="14" x="802.5" y="-5.5" width="35" height="233"/>
+  <object id="15" x="-25.5" y="-10.5" width="26" height="238"/>
+  <object id="16" x="1.5" y="2.5" width="802" height="34"/>
+  <object id="23" x="168" y="63" width="49" height="126"/>
+ </objectgroup>
+ <layer id="2" name="Middleground" width="25" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,37,38,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,45,46,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,53,54,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,61,62,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="7" name="Middleground collision">
+  <object id="9" x="2.5" y="189.5" width="800" height="38"/>
+  <object id="10" x="802.5" y="-6.5" width="35" height="233"/>
+  <object id="11" x="-25.5" y="-11.5" width="26" height="238"/>
+  <object id="12" x="1.5" y="1.5" width="802" height="34"/>
+  <object id="22" x="361" y="69" width="49" height="117"/>
+ </objectgroup>
+ <layer id="1" name="Foreground" width="25" height="7">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,40,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,48,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,56,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,63,64,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="8" name="Foreground collision">
+  <object id="1" x="0" y="189" width="800" height="38"/>
+  <object id="2" x="800" y="-7" width="35" height="233"/>
+  <object id="3" x="-28" y="-12" width="26" height="238"/>
+  <object id="4" x="-1" y="1" width="802" height="34"/>
+  <object id="21" x="558" y="76" width="40" height="112"/>
+ </objectgroup>
+</map>
