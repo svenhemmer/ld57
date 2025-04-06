@@ -24,9 +24,9 @@ export const getAnimatorConvenience = (scene: Scene) => {
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.idle);
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.spawn);
     const obj = {
-        play: (state: string) => {
-            // scene.anims.play(state, true);
-        }
+        // play: (state: string) => {
+        //     // scene.anims.play(state, true);
+        // }
     }
     return obj;
 }
