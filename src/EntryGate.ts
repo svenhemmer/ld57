@@ -20,7 +20,7 @@ export class EntryGate {
         this.scene = scene;
         this.sprite = scene.add.sprite(x, y, "entry-gate-hovering");
         this.scene.add.existing(this.sprite);
-        // this.scene.physics.world.enableBody(this.sprite, 0);
+        this.scene.physics.world.enableBody(this.sprite, 0);
         this.sprite.anims.play("entry-gate-hovering", true);
     }
 

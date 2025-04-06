@@ -21,6 +21,7 @@ export class GameScene extends Phaser.Scene {
     layers: Layer[] = []
     tilemap?: Phaser.Tilemaps.Tilemap
     hero: Hero | null = null
+    entryGate?: EntryGate
     plantsPerLayer: { plant: Bitey, blurEffect?: Phaser.FX.Blur }[][] = [];
     onLayerChange: () => void = () => {}
 
@@ -42,7 +43,7 @@ export class GameScene extends Phaser.Scene {
             .forEach(rect => {
                 if (rect.data?.values?.Start) {
                     console.debug('found start → render sprite')
-                    new EntryGate(this, rect.x + rect.width / 2, rect.y + rect.height / 2)
+                    this.entryGate = new EntryGate(this, rect.x + rect.width / 2, rect.y + rect.height / 2)
                     this.hero = new Hero(this, rect.x + rect.width / 2, rect.y + rect.height / 2);
                 }
             })
@@ -165,6 +166,9 @@ export class GameScene extends Phaser.Scene {
                 }
             });
         })
+        this.otherColliders.push(
+            this.physics.add.collider(this.entryGate!.sprite, this.layers![newLayer].collisionRects)
+        )
         this.currentLayer = newLayer
 
         this.computeLevelGoalBlurryness()
