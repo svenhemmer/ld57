@@ -1,4 +1,6 @@
 import { GameScene } from './GameScene';
+import { Hero } from './hero';
+import { Bitey } from './plant';
 import { getAnimatorConvenience } from './utils/animator';
 import { getLoaderConvenience } from './utils/loader';
 
@@ -42,6 +44,9 @@ export class Level2 extends GameScene {
     });
 
     this.placePlayer()
+    this.plants.push(new Bitey(this, 150, 50))
+    this.plants.push(new Bitey(this, 350, 50))
+    this.changeLayer(1);
     this.changeLayer(0);
 
     super.create();

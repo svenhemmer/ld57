@@ -5,6 +5,7 @@ import { SuccessScene } from './scenes/success.scene'
 import { Hud } from './hud'
 import { LevelGoal } from './LevelGoal'
 import { EntryGate } from './EntryGate'
+import { Bitey } from './plant'
 
 type Layer = {
     name: string
@@ -20,10 +21,12 @@ export class GameScene extends Phaser.Scene {
     layers: Layer[] = []
     tilemap?: Phaser.Tilemaps.Tilemap
     hero: Hero | null = null
+    plants: Bitey[] = [];
     onLayerChange: () => void = () => {}
 
     currentLayer: number = 1
     private currentLayerCollisions: Phaser.Physics.Arcade.Collider | null = null
+    private otherColliders: Phaser.Physics.Arcade.Collider[] = [];
 
     constructor(name: string) {
         super(name);
@@ -101,6 +104,8 @@ export class GameScene extends Phaser.Scene {
         this.layers[newLayer].tilemapLayer.postFX.remove(this.layers[newLayer].blurEffect!)
 
         this.currentLayerCollisions?.destroy()
+        this.otherColliders.forEach(col => col.destroy())
+        this.otherColliders = [];
         console.debug(this.layers![newLayer].collisionRects)
         this.currentLayerCollisions = this.physics.add.collider(this.hero!.sprite, this.layers![newLayer].collisionRects, (_, o2) => {
             const second = o2 as Phaser.Types.Physics.Arcade.GameObjectWithBody;
@@ -112,6 +117,14 @@ export class GameScene extends Phaser.Scene {
                 this.onPlayerDies()
             }
         })
+        this.plants.forEach(plant => {
+            this.otherColliders.push(
+                this.physics.add.collider(plant.sprite, this.layers![newLayer].collisionRects),
+                this.physics.add.collider(this.hero!.sprite, plant.sprite, () => {
+                    this.onPlayerDies();
+                })
+            )
+        });
         this.currentLayer = newLayer
 
         this.computeLevelGoalBlurryness()
@@ -205,6 +218,8 @@ export class GameScene extends Phaser.Scene {
       };
     
     update() {
-        this.hero?.update()
+        if (this.hero === null) return;
+        this.hero.update();
+        this.plants.forEach(plant => plant.update(this.hero!));
     }
 }

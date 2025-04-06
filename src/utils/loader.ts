@@ -2,6 +2,7 @@ import { Scene } from "phaser";
 import { Loader } from "phaser";
 import type { ImageDescription, MusicDescription, SoundDescription, JsonTileMapDescription, SpriteSheetDescription } from "../models/loader-info";
 import { heroConvenience } from "./hero-convenience";
+import { plantConvenience } from "./plant-convenience";
 
 export const createLoader = (scene: Scene) => {
 
@@ -46,7 +47,7 @@ export const getLoaderConvenience = (scene: Scene) => {
         initLoader: () => {        
             heroConvenience.addImagesToLoader(loader);
             heroConvenience.addSoundFx(loader);
-
+            plantConvenience.addImagesToLoader(loader);
             loader.addSpriteSheet([
                 { name: "hovering", path: 'animations/goal_hovering.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
             ]);

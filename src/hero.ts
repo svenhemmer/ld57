@@ -26,9 +26,6 @@ export class Hero {
             this.ready = true;
             this.changeAnimation(HERO_WORDS.idle);
         })
-
-        console.log(this.sprite.anims)
-
         if (!this.scene.input.keyboard) {
             return
         }
@@ -36,6 +33,9 @@ export class Hero {
         space.on('down', () => {
             this.jump()
         })
+        const body = this.sprite.body! as Phaser.Physics.Arcade.Body;
+        body.setSize(16, 32);
+        body.setOffset(8, 0)
     }
 
     controls() {

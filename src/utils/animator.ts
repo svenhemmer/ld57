@@ -3,6 +3,7 @@ import { AnimationDescription } from "../models/animator-info";
 import { HERO_ANIMATION_DESCRIPTIONS } from "./hero-convenience";
 import { LEVEL_GOAL_HOVERING } from "../LevelGoal";
 import { ENTRY_GATE_HOVERING } from "../EntryGate";
+import { PLANT_ANIMATION_DESCRIPTIONS } from "./plant-convenience";
 
 export const animator = (scene: Scene) => {
     return {
@@ -26,6 +27,9 @@ export const getAnimatorConvenience = (scene: Scene) => {
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.run);
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.spawn);
     anim.createAnimation(HERO_ANIMATION_DESCRIPTIONS.die);
+
+    anim.createAnimation(PLANT_ANIMATION_DESCRIPTIONS.idle);
+    anim.createAnimation(PLANT_ANIMATION_DESCRIPTIONS.bite);
 
     anim.createAnimation(LEVEL_GOAL_HOVERING)
     anim.createAnimation(ENTRY_GATE_HOVERING)
