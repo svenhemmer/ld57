@@ -6,10 +6,10 @@ import { Level5 } from "./level5";
 
 // lists levels in their order
 export const levels = [
-    Level5,
     Level2,
     Level3,
     Level4,
+    Level5,
     Level1
 ]
 

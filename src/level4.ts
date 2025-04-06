@@ -15,25 +15,25 @@ export class Level4 extends GameScene {
   }
 
   create(): void {
-    const tilemap = this.make.tilemap({ key: 'lvl4' });
+    this.tilemap = this.make.tilemap({ key: 'lvl4' });
 
-    const tileset = tilemap.addTilesetImage('tileset', 'base_tiles');
+    const tileset = this.tilemap.addTilesetImage('tileset', 'base_tiles');
 
     if (!tileset) {
       throw 'No tiles found';
     }
 
-    const mg = tilemap.createLayer('Middleground', tileset, 0, 0)!;
+    const mg = this.tilemap.createLayer('Middleground', tileset, 0, 0)!;
     this.layers.push({
       name: 'middleground',
-      collisionRects: this.addCollisionLayer(tilemap, 'Middleground collision'),
+      collisionRects: this.addCollisionLayer(this.tilemap, 'Middleground collision'),
       tilemapLayer: mg,
       blurEffect: mg.postFX.addBlur(),
     });
-    const fg = tilemap.createLayer('Foreground', tileset, 0, 0)!;
+    const fg = this.tilemap.createLayer('Foreground', tileset, 0, 0)!;
     this.layers.push({
       name: 'foreground',
-      collisionRects: this.addCollisionLayer(tilemap, 'Foreground collision'),
+      collisionRects: this.addCollisionLayer(this.tilemap, 'Foreground collision'),
       tilemapLayer: fg,
       blurEffect: fg.postFX.addBlur(),
     });

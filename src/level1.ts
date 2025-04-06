@@ -15,32 +15,32 @@ export class Level1 extends GameScene {
   }
 
   create(): void {
-    const lvl1 = this.make.tilemap({ key: 'lvl1' });
+    this.tilemap = this.make.tilemap({ key: 'lvl1' });
 
-    const tileset = lvl1.addTilesetImage('tileset', 'base_tiles');
+    const tileset = this.tilemap.addTilesetImage('tileset', 'base_tiles');
 
     if (!tileset) {
       throw 'No tiles found';
     }
 
-    const bg = lvl1.createLayer('background', tileset, 0, 0)!;
+    const bg = this.tilemap.createLayer('background', tileset, 0, 0)!;
     this.layers.push({
       name: 'background',
-      collisionRects: this.addCollisionLayer(lvl1, 'background collisions'),
+      collisionRects: this.addCollisionLayer(this.tilemap, 'background collisions'),
       tilemapLayer: bg,
       blurEffect: bg.postFX.addBlur(),
     });
-    const mg = lvl1.createLayer('middleground', tileset, 0, 0)!;
+    const mg = this.tilemap.createLayer('middleground', tileset, 0, 0)!;
     this.layers.push({
       name: 'middleground',
-      collisionRects: this.addCollisionLayer(lvl1, 'middleground collisions'),
+      collisionRects: this.addCollisionLayer(this.tilemap, 'middleground collisions'),
       tilemapLayer: mg,
       blurEffect: mg.postFX.addBlur(),
     });
-    const fg = lvl1.createLayer('foreground', tileset, 0, 0)!;
+    const fg = this.tilemap.createLayer('foreground', tileset, 0, 0)!;
     this.layers.push({
       name: 'foreground',
-      collisionRects: this.addCollisionLayer(lvl1, 'foreground collisions'),
+      collisionRects: this.addCollisionLayer(this.tilemap, 'foreground collisions'),
       tilemapLayer: fg,
       blurEffect: fg.postFX.addBlur(),
     });

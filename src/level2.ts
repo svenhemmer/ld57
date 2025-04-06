@@ -15,25 +15,25 @@ export class Level2 extends GameScene {
   }
 
   create(): void {
-    const lvl2 = this.make.tilemap({ key: 'lvl2' });
+    this.tilemap = this.make.tilemap({ key: 'lvl2' });
 
-    const tileset = lvl2.addTilesetImage('tileset', 'base_tiles');
+    const tileset = this.tilemap.addTilesetImage('tileset', 'base_tiles');
 
     if (!tileset) {
       throw 'No tiles found';
     }
 
-    const mg = lvl2.createLayer('Middleground', tileset, 0, 0)!;
+    const mg = this.tilemap.createLayer('Middleground', tileset, 0, 0)!;
     this.layers.push({
       name: 'middleground',
-      collisionRects: this.addCollisionLayer(lvl2, 'Middleground collision'),
+      collisionRects: this.addCollisionLayer(this.tilemap, 'Middleground collision'),
       tilemapLayer: mg,
       blurEffect: mg.postFX.addBlur(),
     });
-    const fg = lvl2.createLayer('Foreground', tileset, 0, 0)!;
+    const fg = this.tilemap.createLayer('Foreground', tileset, 0, 0)!;
     this.layers.push({
       name: 'foreground',
-      collisionRects: this.addCollisionLayer(lvl2, 'Foreground collision'),
+      collisionRects: this.addCollisionLayer(this.tilemap, 'Foreground collision'),
       tilemapLayer: fg,
       blurEffect: fg.postFX.addBlur(),
     });
