@@ -6,14 +6,12 @@ export const animator = (scene: Scene) => {
     return {
         createAnimation: ({ key, frameRate, start, end, repeat, textureName, delay }: AnimationDescription) => {
             scene.anims.create({
-                key, frameRate,
+                key, frameRate, repeat, delay,
                 frames: scene.anims.generateFrameNames(
                     textureName, {
                         start, end
                     }
-                ),
-                repeat,
-                delay
+                )
             })
         }
     }

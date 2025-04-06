@@ -15,22 +15,24 @@ export const HERO_ANIMATION_DESCRIPTIONS = {
         start: 0,
         end: 5,
         frameRate: 8,
-        repeat: -1
+        delay: 500
     },
     run: {
         textureName: HERO_WORDS.run,
         key: HERO_WORDS.run,
         start: 0,
         end: 4,
-        frameRate: 8,
-        // repeat: -1
+        frameRate: 24,
+        repeat: -1,
+        delay: 0
     },
     jump: {
         textureName: HERO_WORDS.jump,
         key: HERO_WORDS.jump,
         start: 0,
         end: 7,
-        frameRate: 8
+        frameRate: 10,
+        delay: 0
     },
     spawn: {
         textureName: HERO_WORDS.spawn,
@@ -45,7 +47,8 @@ export const HERO_ANIMATION_DESCRIPTIONS = {
         key: HERO_WORDS.die,
         start: 0,
         end: 8,
-        frameRate: 8
+        frameRate: 8,
+        delay: 0
     }
 }
 
