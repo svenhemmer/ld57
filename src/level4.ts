@@ -1,21 +1,21 @@
 import { GameScene } from './GameScene';
 import { Hero } from './hero';
 
-export class Level3 extends GameScene {
+export class Level4 extends GameScene {
   constructor() {
-    super(Level3.name);
+    super(Level4.name);
   }
 
   preload(): void {
     this.load.image('base_tiles', 'tileset.png');
 
-    this.load.tilemapTiledJSON('lvl3', 'lvl3/map.json');
+    this.load.tilemapTiledJSON('lvl4', 'lvl4/map.json');
 
     this.load.image('hero', 'hero.png');
   }
 
   create(): void {
-    const tilemap = this.make.tilemap({ key: 'lvl3' });
+    const tilemap = this.make.tilemap({ key: 'lvl4' });
 
     const tileset = tilemap.addTilesetImage('tileset', 'base_tiles');
 
