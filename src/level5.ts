@@ -10,7 +10,7 @@ export class Level5 extends GameScene {
   preload(): void {
     getLoaderConvenience(this)
       .initLoader()
-      .prepareLevel({ name: 'base_tiles', path: 'tileset.png' }, { name: 'lvl5', path: 'lvl5/map.json'})
+      .prepareLevel({ name: 'base_tiles', path: 'tileset.png' }, { name: 'lvl5', path: 'lvl5/lvl5.json'})
       .getLoader().load((progress: number) => {console.log(progress)});
   }
 
