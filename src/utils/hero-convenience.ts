@@ -39,8 +39,8 @@ export const HERO_ANIMATION_DESCRIPTIONS = {
         key: HERO_WORDS.spawn,
         start: 0,
         end: 6,
-        frameRate: 8,
-        delay: 1000
+        frameRate: 9,
+        delay: 500
     },
     die: {
         textureName: HERO_WORDS.die,
