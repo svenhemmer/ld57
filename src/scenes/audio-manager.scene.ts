@@ -16,6 +16,10 @@ export class AudioManagerScene extends Phaser.Scene {
     this.load.image('volume3', '/volume/volume3.png');
   }
 
+  getCurrentVolume() {
+    return this.music.mute ? 0 : this.volumeLevels[this.currentVolume]
+  }
+
   create(): void {
     const music = this.sound.add('bgMusic', { loop: true });
     if ('setVolume' in music && typeof music.setVolume === 'function') {

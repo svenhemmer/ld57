@@ -1,5 +1,6 @@
 import 'phaser';
 import { HERO_WORDS } from './utils/hero-convenience';
+import { AudioManagerScene } from './scenes/audio-manager.scene';
 
 export class Hero {
     
@@ -12,6 +13,12 @@ export class Hero {
 
     runSound;
 
+    private getSfxVolume() {
+        const SFX_VOLUME_MULTIPLIER = 0.7
+        const globalVolume = (this.scene.scene.get(AudioManagerScene.name) as AudioManagerScene).getCurrentVolume()
+        return globalVolume * SFX_VOLUME_MULTIPLIER
+    }
+
     constructor(scene: Phaser.Scene, x: number, y: number){
 
         this.scene = scene;
@@ -19,7 +26,7 @@ export class Hero {
         this.scene.add.existing(this.sprite);
         this.scene.physics.world.enableBody(this.sprite, 0);
         this.sprite.anims.play(HERO_WORDS.spawn, true);
-        scene.sound.play('sound_spawn', { rate: 2 });
+        scene.sound.play('sound_spawn', { rate: 2, volume: this.getSfxVolume() });
         this.runSound = scene.sound.add('sound_run');
         this.runSound.setLoop(true);
         this.sprite.on('animationcomplete', () => { 
@@ -60,7 +67,7 @@ export class Hero {
         if (this.sprite.body!.velocity.y === 0) {
             this.sprite.body!.velocity.y = -270;
             this.jumping = true;
-            this.scene.sound.play('sound_jump', { rate: 2 })
+            this.scene.sound.play('sound_jump', { rate: 2, volume: this.getSfxVolume() })
         }
     }
 
@@ -75,7 +82,7 @@ export class Hero {
         this.ready = false;
         this.sprite.body!.velocity.y = 0;
         this.sprite.body!.velocity.x = 0;
-        this.scene.sound.play('sound_die', { rate: 2 });
+        this.scene.sound.play('sound_die', { rate: 2, volume: this.getSfxVolume() });
         this.changeAnimation(HERO_WORDS.die);
         this.sprite.on('animationcomplete', () => { 
             callback();
@@ -103,7 +110,7 @@ export class Hero {
         }
         if (which === HERO_WORDS.run) {
             if (!this.runSound.isPlaying) {
-                this.runSound.play();
+                this.runSound.play({ volume: this.getSfxVolume() });
             }
         } else {
             this.runSound.stop();
