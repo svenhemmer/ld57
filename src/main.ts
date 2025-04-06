@@ -78,8 +78,8 @@ let configObject: Phaser.Types.Core.GameConfig = {
   physics: {
     default: 'arcade',
     arcade: {
-      //   debug: true,
-      gravity: { x: 0, y: 450 },
+        // debug: true,
+        gravity: { x: 0, y: 450 },
     },
   },
   audio: { disableWebAudio: false },

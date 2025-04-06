@@ -178,9 +178,26 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":18.6666666666667,
-                 "x":6.66666666666667,
-                 "y":167.333333333333
+                 "width":18.6667,
+                 "x":6.66667,
+                 "y":167.333
+                }, 
+                {
+                 "height":10.6666666666667,
+                 "id":17,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"Plant",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":10.0000000000001,
+                 "x":420,
+                 "y":169.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -189,7 +206,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":17,
+ "nextobjectid":21,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

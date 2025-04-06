@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="24">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="27">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -21,7 +21,7 @@
 11,12,37,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 18,18,45,46,0,0,0,0,0,0,0,0,0,0,0,0,35,36,0,0,0,0,0,0,0,
 27,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,44,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,36,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,36,9,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,44,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,36,0,0,0,0,0,
 0,0,0,0,0,0,0,0,35,36,0,0,0,0,0,0,0,0,43,44,0,0,0,0,0,
@@ -58,6 +58,12 @@
     <property name="Start" type="bool" value="true"/>
    </properties>
   </object>
+  <object id="24" x="777" y="405.667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="25" x="770" y="414" width="30" height="33"/>
  </objectgroup>
  <layer id="3" name="Foreground" width="25" height="20">
   <data encoding="csv">
@@ -96,5 +102,6 @@
   <object id="19" x="0" y="258" width="64" height="154"/>
   <object id="17" x="-45" y="27" width="46" height="603"/>
   <object id="21" x="801" y="20" width="43" height="624"/>
+  <object id="26" x="773" y="420" width="29" height="28"/>
  </objectgroup>
 </map>

@@ -35,6 +35,7 @@ export class Level13 extends GameScene {
     });
     
     this.placePlayer()
+    this.playerPlants()
 
     this.changeLayer(0);
 

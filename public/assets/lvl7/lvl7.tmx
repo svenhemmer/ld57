@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="63">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="69">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -123,6 +123,21 @@
     <property name="Start" type="bool" value="true"/>
    </properties>
   </object>
+  <object id="63" x="80" y="234.667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="65" x="705" y="446.667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="68" x="537" y="746.667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="2" name="Foreground" width="25" height="25">
   <data encoding="csv">
@@ -235,6 +250,16 @@
   </object>
   <object id="61" x="-12" y="560" width="39" height="237">
    <polygon points="0,0 39,0 39,237 0,237"/>
+  </object>
+  <object id="64" x="681" y="525.667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="67" x="438" y="748.667" width="10" height="10.6667">
+   <properties>
+    <property name="Plant" type="bool" value="true"/>
+   </properties>
   </object>
  </objectgroup>
 </map>

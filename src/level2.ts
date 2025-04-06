@@ -43,8 +43,7 @@ export class Level2 extends GameScene {
     });
 
     this.placePlayer()
-    this.plants.push(new Bitey(this, 150, 50))
-    // this.plants.push(new Bitey(this, 350, 50))
+    this.playerPlants()
     this.changeLayer(0);
 
     super.create();

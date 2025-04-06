@@ -21,7 +21,7 @@ export class GameScene extends Phaser.Scene {
     layers: Layer[] = []
     tilemap?: Phaser.Tilemaps.Tilemap
     hero: Hero | null = null
-    plants: Bitey[] = [];
+    plantsPerLayer: { plant: Bitey, blurEffect?: Phaser.FX.Blur }[][] = [];
     onLayerChange: () => void = () => {}
 
     currentLayer: number = 1
@@ -48,6 +48,22 @@ export class GameScene extends Phaser.Scene {
             })
     }
 
+    playerPlants() {
+        this.plantsPerLayer = []
+        for (let i = 0; i < this.layers.length; i++) {
+            this.plantsPerLayer.push([])
+            for (let rect of this.layers[i].collisionRects) {
+                if (rect.data?.values?.Plant) {
+                    console.debug('found Plant → render sprite')
+                    this.plantsPerLayer[i].push({
+                        plant: new Bitey(this, rect.x + rect.width / 2, rect.y + rect.height / 2)
+                    })
+                }
+            }
+        }
+        console.debug("→→", this.plantsPerLayer, this.otherColliders)
+    }
+
     create() {
         for (let i = 0; i < this.layers.length; i++) {
             for (let rect of this.layers[i].collisionRects) {
@@ -59,7 +75,7 @@ export class GameScene extends Phaser.Scene {
             }
         }
         this.computeLevelGoalBlurryness()
-        
+        this.computePlantBlurryness()
         this.initControls()
 
         // this.cameras.main.setBounds(0, 0, this.tilemap!.widthInPixels, this.tilemap!.heightInPixels, true);
@@ -91,6 +107,23 @@ export class GameScene extends Phaser.Scene {
         }
     }
 
+    computePlantBlurryness() {
+        // Remove existing blurs on all layers
+        this.plantsPerLayer.flatMap(layer => layer).forEach((plantInfo, i) => {
+            if (plantInfo.blurEffect) {
+                plantInfo.plant.sprite.postFX.remove(plantInfo.blurEffect)
+            }
+        })
+        // Add new blur to all inactive layers
+        this.plantsPerLayer.forEach((layer, i) => {
+            layer.forEach(plantInfo => {
+                if (i !== this.currentLayer) {
+                    plantInfo.blurEffect = plantInfo.plant.sprite.postFX.addBlur()
+                }
+            })
+        })
+    }
+
     changeLayer(newLayer: number) {
         // Remove existing blurs on all layers
         this.layers.forEach((_layer, i) => {
@@ -117,17 +150,25 @@ export class GameScene extends Phaser.Scene {
                 this.onPlayerDies()
             }
         })
-        this.plants.forEach(plant => {
-            this.otherColliders.push(
-                this.physics.add.collider(plant.sprite, this.layers![newLayer].collisionRects),
-                this.physics.add.collider(this.hero!.sprite, plant.sprite, () => {
-                    this.onPlayerDies();
-                })
-            )
-        });
+        
+        this.plantsPerLayer.forEach((layer, i) => {
+            layer.forEach(plant => {
+                this.otherColliders.push(
+                    this.physics.add.collider(plant.plant.sprite, this.layers![newLayer].collisionRects),
+                )
+                if (newLayer === i) {
+                    this.otherColliders.push(
+                        this.physics.add.collider(this.hero!.sprite, plant.plant.sprite, () => {
+                            this.onPlayerDies();
+                        })
+                    )
+                }
+            });
+        })
         this.currentLayer = newLayer
 
         this.computeLevelGoalBlurryness()
+        this.computePlantBlurryness()
 
         this.onLayerChange()
         this.cameras.main.zoomEffect.start(defaultZoom * zoomFactor**this.currentLayer, 400)
@@ -220,6 +261,6 @@ export class GameScene extends Phaser.Scene {
     update() {
         if (this.hero === null) return;
         this.hero.update();
-        this.plants.forEach(plant => plant.update(this.hero!));
+        this.plantsPerLayer.flatMap(layer => layer).forEach(plant => plant.plant.update(this.hero!));
     }
 }

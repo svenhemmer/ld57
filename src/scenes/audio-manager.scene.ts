@@ -17,7 +17,7 @@ export class AudioManagerScene extends Phaser.Scene {
   }
 
   getCurrentVolume() {
-    return this.music.mute ? 0 : this.volumeLevels[this.currentVolume]
+    return this.music?.mute ? 0 : this.volumeLevels[this.currentVolume]
   }
 
   create(): void {

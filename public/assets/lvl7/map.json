@@ -417,11 +417,11 @@
                          "y":0
                         }, 
                         {
-                         "x":43.3333333333333,
+                         "x":43.3333,
                          "y":0
                         }, 
                         {
-                         "x":43.3333333333333,
+                         "x":43.3333,
                          "y":81
                         }, 
                         {
@@ -431,7 +431,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":43.3333333333333,
+                 "width":43.3333,
                  "x":19,
                  "y":311
                 }, 
@@ -797,8 +797,59 @@
                  "type":"",
                  "visible":true,
                  "width":18.6667,
-                 "x":39.9999833333333,
-                 "y":745.333333333333
+                 "x":40,
+                 "y":745.333
+                }, 
+                {
+                 "height":10.6667,
+                 "id":63,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"Plant",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":10,
+                 "x":80,
+                 "y":234.66665
+                }, 
+                {
+                 "height":10.6667,
+                 "id":65,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"Plant",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":10,
+                 "x":705,
+                 "y":446.66665
+                }, 
+                {
+                 "height":10.6667,
+                 "id":68,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"Plant",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":10,
+                 "x":537,
+                 "y":746.66665
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1298,11 +1349,11 @@
                          "y":0
                         }, 
                         {
-                         "x":42.6666666666667,
+                         "x":42.6667,
                          "y":0
                         }, 
                         {
-                         "x":42.6666666666667,
+                         "x":42.6667,
                          "y":81
                         }, 
                         {
@@ -1312,7 +1363,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":42.6666666666667,
+                 "width":42.6667,
                  "x":19,
                  "y":311
                 }, 
@@ -1624,6 +1675,40 @@
                  "width":39,
                  "x":-12,
                  "y":560
+                }, 
+                {
+                 "height":10.6667,
+                 "id":64,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"Plant",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":10,
+                 "x":681,
+                 "y":525.66665
+                }, 
+                {
+                 "height":10.6667,
+                 "id":67,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"Plant",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":10,
+                 "x":438,
+                 "y":748.66665
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1632,7 +1717,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":63,
+ "nextobjectid":69,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

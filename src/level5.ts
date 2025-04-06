@@ -41,6 +41,7 @@ export class Level5 extends GameScene {
     });
 
     this.placePlayer()
+    this.playerPlants()
 
     this.changeLayer(1);
 
