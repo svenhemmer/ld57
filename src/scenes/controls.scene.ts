@@ -1,5 +1,5 @@
+import { gotoNextLevel } from "../levels";
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
-import { InputScene } from "./input.scene";
 
 export class ControlsScene extends Phaser.Scene {
   constructor() {
@@ -12,10 +12,17 @@ export class ControlsScene extends Phaser.Scene {
     const centerX = this.cameras.main.centerX;
     const startY = this.cameras.main.centerY - 150; // Starting position (adjust as needed)
 
+    const heading = this.add.bitmapText(
+      centerX,
+      startY,
+      'our-own-pixelfont',
+      "CONTROLS",
+      32); 
+      heading.setOrigin();
 
     const controls = this.add.bitmapText(
       centerX,
-      startY,
+      startY + 100,
       'our-own-pixelfont',
       "MOVE LEFT AND RIGHT\n  WITH ARROW KEYS",
       32); 
@@ -23,19 +30,19 @@ export class ControlsScene extends Phaser.Scene {
 
     const controls2 = this.add.bitmapText(
       centerX,
-      startY + 150,
+      startY + 220,
       'our-own-pixelfont',
       "FOCUS BACKGROUND OR FOREGROUND\n  WITH UP AND DOWN ARROW KEYS",
       32); 
     controls2.setOrigin();
 
-    renderPressAnyKeyToContinue(this, centerX, startY + 300)
+    renderPressAnyKeyToContinue(this, centerX, startY + 400)
 
     this.input.on('pointerdown', () => this.goToNextScene());
     this.input.keyboard?.on('keydown', () => this.goToNextScene());
   }
 
   goToNextScene() {
-    this.scene.start(InputScene.name);
+    gotoNextLevel(this.scene)
   }
 }

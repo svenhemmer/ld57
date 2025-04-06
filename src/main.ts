@@ -47,7 +47,7 @@ class MainScene extends Phaser.Scene {
   update(): void {}
 
   private goToFirstScene() {
-    const sceneName = ControlsScene.name;
+    const sceneName = InputScene.name;
     console.log(`Starting ${sceneName}`);
     this.scene.start(sceneName);
   }

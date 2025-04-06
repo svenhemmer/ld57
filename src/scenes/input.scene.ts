@@ -1,5 +1,6 @@
 import { getGoal, setGoal } from "../goal";
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
+import { ControlsScene } from "./controls.scene";
 import { SuccessScene } from "./success.scene";
 
 export class InputScene extends Phaser.Scene {
@@ -51,6 +52,6 @@ export class InputScene extends Phaser.Scene {
   }
 
   goToNextScene() {
-    this.scene.start(SuccessScene.name);
+    this.scene.start(ControlsScene.name);
   }
 }
