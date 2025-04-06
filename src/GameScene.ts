@@ -18,6 +18,7 @@ export class GameScene extends Phaser.Scene {
     layers: Layer[] = []
     tilemap?: Phaser.Tilemaps.Tilemap
     hero: Hero | null = null
+    onLayerChange: () => void = () => {}
 
     currentLayer: number = 1
     private currentLayerCollisions: Phaser.Physics.Arcade.Collider | null = null
@@ -61,7 +62,7 @@ export class GameScene extends Phaser.Scene {
         })
         this.currentLayer = newLayer
 
-
+        this.onLayerChange()
         this.cameras.main.zoomEffect.start(defaultZoom * zoomFactor**this.currentLayer, 400)
     }
 

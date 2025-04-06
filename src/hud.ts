@@ -19,6 +19,7 @@ export class Hud extends Phaser.Scene {
     }
 
     create() {
+        this.layerIndicator?.create()
         this.shortcutInfo?.create()
     }
 
