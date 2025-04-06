@@ -5,6 +5,7 @@ import { Level5 } from "./level5";
 import { Level6 } from "./level6";
 import { Level7 } from "./level7";
 import { Level8 } from "./level8";
+import { Level9 } from "./level9";
 
 // lists levels in their order
 export const levels = [
@@ -13,6 +14,7 @@ export const levels = [
     Level8,
     Level4,
     Level5,
+    Level9,
     Level6,
     Level7,
 ]
