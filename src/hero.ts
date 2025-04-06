@@ -1,7 +1,7 @@
 import 'phaser';
 
-
 export class Hero extends Phaser.GameObjects.Sprite {
+    
     declare body: Phaser.Physics.Arcade.Body
 
     constructor(scene: Phaser.Scene, x: number, y: number){
