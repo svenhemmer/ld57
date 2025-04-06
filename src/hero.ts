@@ -62,8 +62,6 @@ export class Hero extends Phaser.GameObjects.Sprite {
 
         this.controls();
 
-        this.x = Phaser.Math.Clamp(this.x, 0, Number(this.scene.game.config.width));
-        this.y = Phaser.Math.Clamp(this.y, 0, Number(this.scene.game.config.height));
     }
 }
 

@@ -10,6 +10,7 @@ type Layer = {
 
 export class GameScene extends Phaser.Scene {
     layers: Layer[] = []
+    tilemap?: Phaser.Tilemaps.Tilemap
     hero: Hero | null = null
 
 
@@ -22,6 +23,9 @@ export class GameScene extends Phaser.Scene {
 
     create() {
         this.initControls()
+
+        this.cameras.main.setBounds(0, 0, this.tilemap!.widthInPixels, this.tilemap!.heightInPixels, true);
+        this.cameras.main.startFollow(this.hero!)
     }
 
     changeLayer(newLayer: number) {
