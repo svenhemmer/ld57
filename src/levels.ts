@@ -1,5 +1,6 @@
 import { Level10 } from "./level10";
 import { Level11 } from "./level11";
+import { Level12 } from "./level12";
 import { Level2 } from "./level2";
 import { Level3 } from "./level3";
 import { Level5 } from "./level5";
@@ -19,6 +20,7 @@ export const levels = [
     Level9,
     Level7,
     Level10,
+    Level12,
 ]
 
 let currentLevel = -1
