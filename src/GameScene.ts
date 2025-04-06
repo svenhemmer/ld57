@@ -110,7 +110,7 @@ export class GameScene extends Phaser.Scene {
 
     computePlantBlurryness() {
         // Remove existing blurs on all layers
-        this.plantsPerLayer.flatMap(layer => layer).forEach((plantInfo, i) => {
+        this.plantsPerLayer.flatMap(layer => layer).forEach((plantInfo, _i) => {
             if (plantInfo.blurEffect) {
                 plantInfo.plant.sprite.postFX.remove(plantInfo.blurEffect)
             }
