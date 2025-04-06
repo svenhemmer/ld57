@@ -1,3 +1,4 @@
+import { getGoal } from "../goal";
 import { getNextLevelInfoText, gotoNextLevel } from "../levels";
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
 
@@ -10,16 +11,25 @@ export class SuccessScene extends Phaser.Scene {
 
   create() {
     const centerX = this.cameras.main.centerX;
-    const startY = this.cameras.main.centerY - 100; // Starting position (adjust as needed)
+    const startY = this.cameras.main.centerY - 150; // Starting position (adjust as needed)
 
 
     const controls = this.add.bitmapText(
       centerX,
       startY,
       'our-own-pixelfont',
-      "SUCCESS",
+      `ONE STEP CLOSER TO`,
       32); 
     controls.setOrigin();
+
+    const text3 = this.add.bitmapText(
+      centerX,
+      startY + 60,
+      'our-own-pixelfont',
+      `${getGoal()}`,
+      32);
+    text3.setOrigin();
+    text3.setTintFill(0xf04f78)
 
     const controls2 = this.add.bitmapText(
       centerX,

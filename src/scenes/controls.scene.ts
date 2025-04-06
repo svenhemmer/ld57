@@ -1,5 +1,5 @@
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
-import { SuccessScene } from "./success.scene";
+import { InputScene } from "./input.scene";
 
 export class ControlsScene extends Phaser.Scene {
   constructor() {
@@ -10,7 +10,7 @@ export class ControlsScene extends Phaser.Scene {
 
   create() {
     const centerX = this.cameras.main.centerX;
-    const startY = this.cameras.main.centerY - 100; // Starting position (adjust as needed)
+    const startY = this.cameras.main.centerY - 150; // Starting position (adjust as needed)
 
 
     const controls = this.add.bitmapText(
@@ -36,6 +36,6 @@ export class ControlsScene extends Phaser.Scene {
   }
 
   goToNextScene() {
-    this.scene.start(SuccessScene.name);
+    this.scene.start(InputScene.name);
   }
 }
