@@ -7,8 +7,7 @@ export class Level2 extends GameScene {
   }
 
   preload(): void {
-    this.load.image('base_tiles', 'lvl1/tileset.png');
-    this.load.image('tree_tiles', 'lvl2/Tree 1.png');
+    this.load.image('base_tiles', 'tileset.png');
 
     this.load.tilemapTiledJSON('lvl2', 'lvl2/map.json');
 
@@ -19,9 +18,8 @@ export class Level2 extends GameScene {
     const lvl2 = this.make.tilemap({ key: 'lvl2' });
 
     const tileset = lvl2.addTilesetImage('tileset', 'base_tiles');
-    const tree_tileset = lvl2.addTilesetImage('Tree', 'tree_tiles');
 
-    if (!tileset || !tree_tileset) {
+    if (!tileset) {
       throw 'No tiles found';
     }
 
@@ -32,7 +30,7 @@ export class Level2 extends GameScene {
       tilemapLayer: mg,
       blurEffect: mg.postFX.addBlur(),
     });
-    const fg = lvl2.createLayer('Foreground', [tileset, tree_tileset], 0, 0)!;
+    const fg = lvl2.createLayer('Foreground', tileset, 0, 0)!;
     this.layers.push({
       name: 'foreground',
       collisionRects: this.addCollisionLayer(lvl2, 'Foreground collision'),
