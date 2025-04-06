@@ -1,6 +1,6 @@
 import { Hero } from './hero'
 import { LayerIndicator } from './LayerIndicator'
-import { gotoNextLevel } from './levels'
+import { SuccessScene } from './scenes/success.scene'
 
 type Layer = {
     name: string
@@ -103,9 +103,7 @@ export class GameScene extends Phaser.Scene {
     }
 
     endLevel() {
-        // TODO Show success screen?
-
-        gotoNextLevel(this.scene)
+        this.scene.start(SuccessScene.name);
     }
 
     restartLevel() {

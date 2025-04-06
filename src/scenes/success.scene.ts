@@ -1,8 +1,8 @@
-import { SuccessScene } from "./success.scene";
+import { getNextLevelInfoText, gotoNextLevel } from "../levels";
 
-export class ControlsScene extends Phaser.Scene {
+export class SuccessScene extends Phaser.Scene {
   constructor() {
-    super(ControlsScene.name);
+    super(SuccessScene.name);
   }
 
   preload() {}
@@ -16,7 +16,7 @@ export class ControlsScene extends Phaser.Scene {
       centerX,
       startY,
       'our-own-pixelfont',
-      "MOVE LEFT AND RIGHT\n  WITH ARROW KEYS",
+      "SUCCESS",
       32); 
     controls.setOrigin();
 
@@ -24,7 +24,7 @@ export class ControlsScene extends Phaser.Scene {
       centerX,
       startY + 150,
       'our-own-pixelfont',
-      "FOCUS BACKGROUND OR FOREGROUND\n  WITH UP AND DOWN ARROW KEYS",
+      `PREPARING ${getNextLevelInfoText()}`,
       32); 
     controls2.setOrigin();
 
@@ -41,6 +41,6 @@ export class ControlsScene extends Phaser.Scene {
   }
 
   goToNextScene() {
-    this.scene.start(SuccessScene.name);
+    gotoNextLevel(this.scene)
   }
 }

@@ -33,3 +33,11 @@ export function gotoNextLevel(scene: Phaser.Scenes.ScenePlugin) {
     console.info(`Starting level ${currentLevel} (${levels[currentLevel].name})`)
     scene.start(levels[currentLevel].name);
 }
+
+export function getNextLevelInfoText() {
+    const nextLevel = currentLevel + 1
+    if (nextLevel > levels.length - 1) {
+        return "GAME ENDING"
+    }
+    return `LEVEL ${nextLevel + 1}`
+}
