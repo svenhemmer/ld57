@@ -148,4 +148,8 @@ export class GameScene extends Phaser.Scene {
           })
           .map((rect) => this.physics.add.existing(rect, true));
       };
+    
+    update() {
+        this.hero?.update()
+    }
 }

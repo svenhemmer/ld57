@@ -41,8 +41,4 @@ export class Level8 extends GameScene {
 
     super.create();
   }
-
-  update(): void {
-    this.hero?.update();
-  }
 }
