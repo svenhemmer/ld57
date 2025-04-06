@@ -23,7 +23,7 @@ export class InputScene extends Phaser.Scene {
     controls.setOrigin();
 
     setTimeout(() => {
-      var goal = prompt("What do you strife for in life?\n\n(for budgeting purposes, only characters A-Z and 0-9 are allowed)", "");
+      var goal = prompt("What do you strife for in life?\n\nPower? Happiness? Riches?\n\nLean back and take a moment to think.\n\n(for budgeting reasons, only characters A-Z and 0-9 are allowed)", "");
 
       setGoal(goal ?? "Happiness")
       const text2 = this.add.bitmapText(
