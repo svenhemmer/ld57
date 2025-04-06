@@ -1,5 +1,4 @@
 import { getGoal } from "../goal";
-import { gotoNextLevel } from "../levels";
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
 import { End2Scene } from "./end2.scene";
 
