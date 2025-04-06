@@ -1,5 +1,7 @@
 import { Hero } from './hero'
 import { LayerIndicator } from './LayerIndicator'
+import { wasLastLevel } from './levels'
+import { EndScene } from './scenes/end.scene'
 import { SuccessScene } from './scenes/success.scene'
 
 type Layer = {
@@ -104,6 +106,10 @@ export class GameScene extends Phaser.Scene {
     }
 
     endLevel() {
+        if (wasLastLevel()) {
+            this.scene.start(EndScene.name)
+            return
+        }
         this.scene.start(SuccessScene.name);
     }
 

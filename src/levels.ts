@@ -41,3 +41,7 @@ export function getNextLevelInfoText() {
     }
     return `LEVEL ${nextLevel + 1}`
 }
+
+export function wasLastLevel() {
+    return currentLevel >= levels.length - 1
+}

@@ -5,6 +5,8 @@ import { levels } from './levels.ts';
 import { SuccessScene } from './scenes/success.scene.ts';
 import { renderPressAnyKeyToContinue } from './utils/text.utils.ts';
 import { InputScene } from './scenes/input.scene.ts';
+import { EndScene } from './scenes/end.scene.ts';
+import { End2Scene } from './scenes/end2.scene.ts';
 // import { buttonStyleConfig } from './utils/text.utils.ts';
 
 class MainScene extends Phaser.Scene {
@@ -69,7 +71,7 @@ let configObject: Phaser.Types.Core.GameConfig = {
       gravity: { x: 0, y: 450 },
     },
   },
-  scene: [MainScene, ControlsScene, SuccessScene, InputScene, ...levels],
+  scene: [MainScene, ControlsScene, SuccessScene, InputScene, EndScene, End2Scene, ...levels],
 };
 
 new Phaser.Game(configObject);

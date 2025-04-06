@@ -35,7 +35,7 @@ export class InputScene extends Phaser.Scene {
       text2.setOrigin();
       const text3 = this.add.bitmapText(
         centerX,
-        startY + 170,
+        startY + 200,
         'our-own-pixelfont',
         `${getGoal()}`,
         32);

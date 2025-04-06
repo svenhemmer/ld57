@@ -1,6 +1,7 @@
 import { getGoal } from "../goal";
-import { getNextLevelInfoText, gotoNextLevel } from "../levels";
+import { getNextLevelInfoText, gotoNextLevel, wasLastLevel } from "../levels";
 import { renderPressAnyKeyToContinue } from "../utils/text.utils";
+import { EndScene } from "./end.scene";
 
 export class SuccessScene extends Phaser.Scene {
   constructor() {
@@ -47,6 +48,10 @@ export class SuccessScene extends Phaser.Scene {
   }
 
   goToNextScene() {
+    if (wasLastLevel()) {
+      this.scene.start(EndScene.name)
+      return
+    }
     gotoNextLevel(this.scene)
   }
 }
