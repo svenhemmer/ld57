@@ -1,7 +1,6 @@
 import { GameScene } from './GameScene';
 import { Hero } from './hero';
-import { heroConvenience } from './utils/hero-convenience';
-import { createLoader } from './utils/loader';
+import { getLoaderConvenience } from './utils/loader';
 
 export class Level1 extends GameScene {
   constructor() {
@@ -9,16 +8,10 @@ export class Level1 extends GameScene {
   }
 
   preload(): void {
-    const loader = createLoader(this);
-    heroConvenience.addImagesToLoader(loader);
-    loader.addImages([
-      { name: 'base_tiles', path: 'lvl1/tileset.png' },
-      { name: 'hero', path: 'hero.png' }
-    ])
-    loader.addMapDescriptions([
-      { name: 'lvl1', path: 'lvl1/combined.json'}
-    ])
-    loader.load((progress: number) => {console.log(progress)});
+    getLoaderConvenience(this)
+      .initLoader()
+      .prepareLevel({ name: 'base_tiles', path: 'lvl1/tileset.png' }, { name: 'lvl1', path: 'lvl1/combined.json'})
+      .getLoader().load((progress: number) => {console.log(progress)});
   }
 
   create(): void {
