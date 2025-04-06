@@ -8,11 +8,9 @@ export const HERO_WORDS = {
     die: 'HERO_DIE'
 };
 
-export const TEXTURE_POSTFIX = '';
-
 export const HERO_ANIMATION_DESCRIPTIONS = {
     idle: {
-        textureName: HERO_WORDS.idle + TEXTURE_POSTFIX,
+        textureName: HERO_WORDS.idle,
         key: HERO_WORDS.idle,
         start: 0,
         end: 5,
@@ -20,7 +18,7 @@ export const HERO_ANIMATION_DESCRIPTIONS = {
         repeat: -1
     },
     spawn: {
-        textureName: HERO_WORDS.spawn + TEXTURE_POSTFIX,
+        textureName: HERO_WORDS.spawn,
         key: HERO_WORDS.spawn,
         start: 0,
         end: 7,
@@ -33,11 +31,11 @@ export const heroConvenience = {
     
     addImagesToLoader: ( loader: Loader ) => {
         loader.addSpriteSheet([
-            { name: HERO_WORDS.idle + TEXTURE_POSTFIX, path: 'animations/bob_idle.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
-            { name: HERO_WORDS.run + TEXTURE_POSTFIX, path: 'animations/bob_run.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
-            { name: HERO_WORDS.jump + TEXTURE_POSTFIX, path: 'animations/bob_jump.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
-            { name: HERO_WORDS.spawn + TEXTURE_POSTFIX, path: 'animations/bob_spawn.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
-            { name: HERO_WORDS.die + TEXTURE_POSTFIX, path: 'animations/bob_die.png', frameDimensions: { frameHeight: 32, frameWidth: 32} }
+            { name: HERO_WORDS.idle, path: 'animations/bob_idle.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            { name: HERO_WORDS.run, path: 'animations/bob_run.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            { name: HERO_WORDS.jump, path: 'animations/bob_jump.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            { name: HERO_WORDS.spawn, path: 'animations/bob_spawn.png', frameDimensions: { frameHeight: 32, frameWidth: 32} },
+            { name: HERO_WORDS.die, path: 'animations/bob_die.png', frameDimensions: { frameHeight: 32, frameWidth: 32} }
         ]);
     }
 }
