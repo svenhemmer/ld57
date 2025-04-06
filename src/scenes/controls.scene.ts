@@ -15,7 +15,7 @@ export class ControlsScene extends Phaser.Scene {
   create() {
     this.add.image(0, 0, 'bg').setOrigin(0)
     const centerX = this.cameras.main.centerX;
-    const startY = this.cameras.main.centerY - 150; // Starting position (adjust as needed)
+    const startY = this.cameras.main.centerY - 200; // Starting position (adjust as needed)
 
     const heading = this.add.bitmapText(
       centerX,

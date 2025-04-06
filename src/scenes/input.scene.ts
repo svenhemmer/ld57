@@ -19,9 +19,9 @@ export class InputScene extends Phaser.Scene {
 
     const controls = this.add.bitmapText(
       centerX,
-      startY,
+      startY - 20,
       'our-own-pixelfont',
-      'WHAT DO YOU STRIFE FOR IN LIFE?',
+      'WHAT DO YOU STRIFE FOR\n        IN LIFE?',
       32
     );
     controls.setOrigin();

@@ -32,7 +32,7 @@ class MainScene extends Phaser.Scene {
   create(): void {
     this.add.image(0, 0, 'bg').setOrigin(0)
     const centerX = this.cameras.main.centerX;
-    const startY = this.cameras.main.centerY - 100; // Starting position (adjust as needed)
+    const startY = this.cameras.main.centerY - 150; // Starting position (adjust as needed)
 
     const title = this.add.bitmapText(
       centerX,
@@ -48,6 +48,15 @@ class MainScene extends Phaser.Scene {
     //   buttonStyleConfig()
     // );
     title.setOrigin();
+
+    const credits = this.add.bitmapText(
+        centerX,
+        this.cameras.main.height - 80,
+        'our-own-pixelfont',
+        '           FROM\nDANIEL  KARLA  SIMON  SVEN',
+        32
+      );
+      credits.setOrigin();
 
     renderPressAnyKeyToContinue(this, centerX, startY + title.height + 100);
 
@@ -78,7 +87,7 @@ let configObject: Phaser.Types.Core.GameConfig = {
   physics: {
     default: 'arcade',
     arcade: {
-        // debug: true,
+        debug: true,
         gravity: { x: 0, y: 450 },
     },
   },
