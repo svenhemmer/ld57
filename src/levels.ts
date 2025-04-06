@@ -1,4 +1,5 @@
 import { Level10 } from "./level10";
+import { Level11 } from "./level11";
 import { Level2 } from "./level2";
 import { Level3 } from "./level3";
 import { Level5 } from "./level5";
@@ -14,6 +15,7 @@ export const levels = [
     Level5,
     // Level6, // not a good level
     Level8,
+    Level11,
     Level9,
     Level7,
     Level10,
