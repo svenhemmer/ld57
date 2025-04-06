@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="18">
+ <editorsettings>
+  <export format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="128" columns="8">
+  <image source="../tileset.png" trans="ff00ff" width="256" height="512"/>
+ </tileset>
+ <layer id="1" name="Middleground" width="20" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,36,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,44,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,52,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,59,60,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="3" name="Middleground collision">
+  <object id="10" x="-2.5625" y="189" width="644" height="28"/>
+  <object id="14" x="-24" y="-6.66667" width="24" height="232"/>
+  <object id="15" x="641.333" y="-4.66667" width="24" height="232"/>
+  <object id="16" x="469.667" y="84.6667" width="18" height="100"/>
+  <object id="17" x="451.667" y="66" width="58" height="52"/>
+ </objectgroup>
+ <layer id="5" name="Foreground" width="20" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,37,38,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,45,46,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,53,54,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,61,62,0,0,0,0,0,0,0,0,0,0,0,0,73,
+25,26,26,26,27,26,26,26,27,26,26,27,27,26,27,27,27,27,27,28,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="4" name="Foreground collision">
+  <object id="3" x="182.667" y="90.6667" width="18" height="100"/>
+  <object id="4" x="164.667" y="72" width="58" height="52"/>
+  <object id="6" x="3" y="189" width="637" height="30"/>
+  <object id="11" x="614" y="166.667" width="23.3333" height="21.3333">
+   <properties>
+    <property name="Goal" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="12" x="639.333" y="-0.666667" width="24" height="225.333"/>
+  <object id="13" x="-24" y="-6.66667" width="24" height="232"/>
+ </objectgroup>
+</map>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="62">
+ <editorsettings>
+  <export target="map.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="128" columns="8">
+  <image source="../tileset.png" trans="ff00ff" width="256" height="512"/>
+ </tileset>
+ <layer id="1" name="Background" width="25" height="25">
+  <data encoding="csv">
+19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,0,0,
+19,19,19,19,19,19,19,19,19,19,19,19,19,11,11,0,0,0,0,0,0,0,11,11,12,
+19,19,19,19,19,19,19,19,19,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,19,19,19,19,19,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,19,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,74,17,
+19,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,11,11,19,
+19,20,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
+19,20,20,0,0,0,0,0,0,0,0,0,0,37,38,0,0,0,0,0,0,0,0,0,17,
+19,20,0,0,0,0,0,0,0,11,11,0,0,45,46,0,0,0,0,0,0,0,0,0,17,
+19,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,20,0,0,0,0,0,0,0,0,39,40,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,19,10,12,0,0,0,0,0,0,47,48,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,19,19,19,12,0,0,0,0,0,55,56,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,19,19,19,19,9,12,0,0,0,63,64,0,0,0,0,0,0,0,0,0,0,0,17,
+19,19,19,19,19,19,19,19,10,10,10,10,10,10,11,12,0,0,0,0,0,9,9,9,19,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,17,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,9,12,0,0,0,17,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,9,19,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,
+9,10,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,19
+</data>
+ </layer>
+ <objectgroup id="4" name="Background collision">
+  <object id="1" x="3" y="770" width="795" height="30">
+   <polygon points="0,0 795,0 795,30 0,30"/>
+  </object>
+  <object id="2" x="768" y="15" width="39" height="788">
+   <polygon points="0,0 39,0 39,788 0,788"/>
+  </object>
+  <object id="3" x="-3" y="543" width="515" height="31">
+   <polygon points="0,0 515,0 515,31 0,31"/>
+  </object>
+  <object id="4" x="512" y="576" width="32" height="32">
+   <polygon points="0,0 32,0 32,32 0,32"/>
+  </object>
+  <object id="5" x="576" y="637" width="97" height="35">
+   <polygon points="0,0 97,0 97,35 0,35"/>
+  </object>
+  <object id="6" x="706" y="702" width="76" height="33">
+   <polygon points="0,0 76,0 76,33 0,33"/>
+  </object>
+  <object id="7" x="673" y="544" width="104" height="33">
+   <polygon points="0,0 104,0 104,33 0,33"/>
+  </object>
+  <object id="8" x="676" y="227" width="100" height="27">
+   <polygon points="0,0 100,0 100,27 0,27"/>
+  </object>
+  <object id="9" x="292" y="319" width="60" height="33">
+   <polygon points="0,0 60,0 60,33 0,33"/>
+  </object>
+  <object id="10" x="17" y="511" width="238" height="28">
+   <polygon points="0,0 238,0 238,28 0,28"/>
+  </object>
+  <object id="11" x="134" y="481" width="56" height="32">
+   <polygon points="0,0 56,0 56,32 0,32"/>
+  </object>
+  <object id="12" x="57" y="451" width="99" height="27">
+   <polygon points="0,0 99,0 99,27 0,27"/>
+  </object>
+  <object id="13" x="32" y="384" width="64" height="67">
+   <polygon points="0,0 64,0 64,67 0,67"/>
+  </object>
+  <object id="14" x="19" y="311" width="47" height="81">
+   <polygon points="0,0 47,0 47,81 0,81"/>
+  </object>
+  <object id="15" x="5" y="256" width="90" height="65">
+   <polygon points="0,0 90,0 90,65 0,65"/>
+  </object>
+  <object id="16" x="6" y="175" width="62" height="78">
+   <polygon points="0,0 62,0 62,78 0,78"/>
+  </object>
+  <object id="17" x="53" y="148" width="40" height="72">
+   <polygon points="0,0 40,0 40,72 0,72"/>
+  </object>
+  <object id="18" x="86" y="148" width="43" height="47">
+   <polygon points="0,0 43,0 43,47 0,47"/>
+  </object>
+  <object id="19" x="96" y="82" width="96" height="78">
+   <polygon points="0,0 96,0 96,78 0,78"/>
+  </object>
+  <object id="20" x="198" y="-9" width="124" height="136">
+   <polygon points="0,0 124,0 124,136 0,136"/>
+  </object>
+  <object id="21" x="321" y="-6" width="63" height="102">
+   <polygon points="0,0 63,0 63,102 0,102"/>
+  </object>
+  <object id="22" x="375" y="-23" width="104" height="85">
+   <polygon points="0,0 104,0 104,85 0,85"/>
+  </object>
+  <object id="23" x="478" y="-9" width="277" height="41">
+   <polygon points="0,0 277,0 277,41 0,41"/>
+  </object>
+  <object id="24" x="705" y="31" width="68" height="33">
+   <polygon points="0,0 68,0 68,33 0,33"/>
+  </object>
+  <object id="34" x="711" y="193" width="57" height="30">
+   <properties>
+    <property name="Goal" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="35" x="-12" y="560" width="39" height="237">
+   <polygon points="0,0 39,0 39,237 0,237"/>
+  </object>
+  <object id="27" x="356" y="436" width="56" height="104"/>
+  <object id="29" x="419" y="292" width="59" height="59"/>
+ </objectgroup>
+ <layer id="2" name="Foreground" width="25" height="25">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,34,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,42,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,50,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,33,34,0,0,0,0,0,57,58,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,41,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,57,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,38,0,0,0,33,34,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,46,0,0,0,41,42,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,50,0,
+0,0,0,0,0,37,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,58,0,
+0,0,0,0,0,45,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,41,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,49,50,0,0,0,37,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,57,58,0,0,0,45,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,53,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,61,62,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="5" name="Foreground collision">
+  <object id="25" x="301" y="641" width="40" height="130"/>
+  <object id="26" x="141" y="569" width="30" height="111"/>
+  <object id="28" x="162" y="352" width="64" height="63"/>
+  <object id="30" x="548" y="254" width="59" height="64"/>
+  <object id="31" x="711" y="254" width="41" height="107"/>
+  <object id="32" x="497" y="33" width="27" height="106"/>
+  <object id="33" x="271" y="127" width="33" height="107"/>
+  <object id="60" x="3" y="770" width="795" height="30">
+   <polygon points="0,0 795,0 795,30 0,30"/>
+  </object>
+  <object id="59" x="768" y="15" width="39" height="788">
+   <polygon points="0,0 39,0 39,788 0,788"/>
+  </object>
+  <object id="58" x="-3" y="543" width="515" height="31">
+   <polygon points="0,0 515,0 515,31 0,31"/>
+  </object>
+  <object id="57" x="512" y="576" width="32" height="32">
+   <polygon points="0,0 32,0 32,32 0,32"/>
+  </object>
+  <object id="56" x="576" y="637" width="97" height="35">
+   <polygon points="0,0 97,0 97,35 0,35"/>
+  </object>
+  <object id="55" x="706" y="702" width="76" height="33">
+   <polygon points="0,0 76,0 76,33 0,33"/>
+  </object>
+  <object id="54" x="673" y="544" width="104" height="33">
+   <polygon points="0,0 104,0 104,33 0,33"/>
+  </object>
+  <object id="53" x="676" y="227" width="100" height="27">
+   <polygon points="0,0 100,0 100,27 0,27"/>
+  </object>
+  <object id="52" x="292" y="319" width="60" height="33">
+   <polygon points="0,0 60,0 60,33 0,33"/>
+  </object>
+  <object id="51" x="17" y="511" width="238" height="28">
+   <polygon points="0,0 238,0 238,28 0,28"/>
+  </object>
+  <object id="50" x="134" y="481" width="56" height="32">
+   <polygon points="0,0 56,0 56,32 0,32"/>
+  </object>
+  <object id="49" x="57" y="451" width="99" height="27">
+   <polygon points="0,0 99,0 99,27 0,27"/>
+  </object>
+  <object id="48" x="32" y="384" width="64" height="67">
+   <polygon points="0,0 64,0 64,67 0,67"/>
+  </object>
+  <object id="47" x="19" y="311" width="47" height="81">
+   <polygon points="0,0 47,0 47,81 0,81"/>
+  </object>
+  <object id="46" x="5" y="256" width="90" height="65">
+   <polygon points="0,0 90,0 90,65 0,65"/>
+  </object>
+  <object id="45" x="6" y="175" width="62" height="78">
+   <polygon points="0,0 62,0 62,78 0,78"/>
+  </object>
+  <object id="44" x="53" y="148" width="40" height="72">
+   <polygon points="0,0 40,0 40,72 0,72"/>
+  </object>
+  <object id="43" x="86" y="148" width="43" height="47">
+   <polygon points="0,0 43,0 43,47 0,47"/>
+  </object>
+  <object id="42" x="96" y="82" width="96" height="78">
+   <polygon points="0,0 96,0 96,78 0,78"/>
+  </object>
+  <object id="41" x="198" y="-9" width="124" height="136">
+   <polygon points="0,0 124,0 124,136 0,136"/>
+  </object>
+  <object id="40" x="321" y="-6" width="63" height="102">
+   <polygon points="0,0 63,0 63,102 0,102"/>
+  </object>
+  <object id="39" x="375" y="-23" width="104" height="85">
+   <polygon points="0,0 104,0 104,85 0,85"/>
+  </object>
+  <object id="38" x="478" y="-9" width="277" height="41">
+   <polygon points="0,0 277,0 277,41 0,41"/>
+  </object>
+  <object id="37" x="705" y="31" width="68" height="33">
+   <polygon points="0,0 68,0 68,33 0,33"/>
+  </object>
+  <object id="61" x="-12" y="560" width="39" height="237">
+   <polygon points="0,0 39,0 39,237 0,237"/>
+  </object>
+ </objectgroup>
+</map>
