@@ -65,7 +65,7 @@ export class Hero {
     jump() {
         this.changeAnimation(HERO_WORDS.jump);
         if (this.sprite.body!.velocity.y === 0) {
-            this.sprite.body!.velocity.y = -270;
+            this.sprite.body!.velocity.y = -280;
             this.jumping = true;
             this.scene.sound.play('sound_jump', { rate: 2, volume: this.getSfxVolume() })
         }
@@ -82,8 +82,9 @@ export class Hero {
         this.ready = false;
         this.sprite.body!.velocity.y = 0;
         this.sprite.body!.velocity.x = 0;
-        this.scene.sound.play('sound_die', { rate: 2, volume: this.getSfxVolume() });
+        this.scene.sound.play('sound_die', { rate: 2, volume: this.getSfxVolume() / 2 });
         this.changeAnimation(HERO_WORDS.die);
+
         this.sprite.on('animationcomplete', () => { 
             callback();
         })
