@@ -56,13 +56,30 @@ export class Hero {
     }
 
     jump() {
-        console.debug(this.sprite.body!.velocity)
         this.changeAnimation(HERO_WORDS.jump);
         if (this.sprite.body!.velocity.y === 0) {
             this.sprite.body!.velocity.y = -270;
             this.jumping = true;
             this.scene.sound.play('sound_jump', { rate: 2 })
         }
+    }
+
+    cleanup() {
+        this.runSound.stop();
+        this.sprite.body!.velocity.y = 0;
+        this.sprite.body!.velocity.x = 0;
+    }
+
+    die(callback: () => void) {
+        this.runSound.stop();
+        this.ready = false;
+        this.sprite.body!.velocity.y = 0;
+        this.sprite.body!.velocity.x = 0;
+        this.scene.sound.play('sound_die', { rate: 2 });
+        this.changeAnimation(HERO_WORDS.die);
+        this.sprite.on('animationcomplete', () => { 
+            callback();
+        })
     }
 
     moveLeft() {

@@ -65,12 +65,17 @@ export class GameScene extends Phaser.Scene {
 
     onPlayerReachesGoal() {
         console.debug('Level finished!')
+        this.hero?.cleanup();
         this.endLevel()
     }
 
     onPlayerDies() {
         console.debug('Level you died!')
-        this.restartLevel()
+        const callback = () => {
+            this.hero = null;
+            this.restartLevel();
+        };
+        this.hero?.die(callback);
     }
 
     zoomIn() {

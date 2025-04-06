@@ -15,6 +15,7 @@ export class Level5 extends GameScene {
   }
 
   create(): void {
+    getLoaderConvenience(this);
     this.tilemap = this.make.tilemap({ key: 'lvl5' });
 
     const tileset = this.tilemap.addTilesetImage('tileset', 'base_tiles');
