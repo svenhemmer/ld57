@@ -13,6 +13,7 @@ export class Hud extends Phaser.Scene {
 
     init(data: any) {
         this.gameScene = data.currentGameScene
+        this.scene.moveAbove(this.gameScene!)
         this.layerIndicator = new LayerIndicator(this, this.gameScene!)
         this.helpButton = new HelpButton(this, this.gameScene!)
     }
