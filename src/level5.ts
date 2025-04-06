@@ -1,5 +1,4 @@
 import { GameScene } from './GameScene';
-import { Hero } from './hero';
 import { getLoaderConvenience } from './utils/loader';
 
 export class Level5 extends GameScene {

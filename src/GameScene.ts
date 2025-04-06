@@ -42,7 +42,7 @@ export class GameScene extends Phaser.Scene {
             .forEach(rect => {
                 if (rect.data?.values?.Start) {
                     console.debug('found start → render sprite')
-                    const entryGate = new EntryGate(this, rect.x + rect.width / 2, rect.y + rect.height / 2)
+                    new EntryGate(this, rect.x + rect.width / 2, rect.y + rect.height / 2)
                     this.hero = new Hero(this, rect.x + rect.width / 2, rect.y + rect.height / 2);
                 }
             })

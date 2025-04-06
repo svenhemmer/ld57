@@ -1,6 +1,4 @@
 import { GameScene } from './GameScene';
-import { Hero } from './hero';
-import { Bitey } from './plant';
 import { getAnimatorConvenience } from './utils/animator';
 import { getLoaderConvenience } from './utils/loader';
 
