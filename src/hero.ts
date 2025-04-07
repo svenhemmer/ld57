@@ -85,6 +85,10 @@ export class Hero {
         this.scene.sound.play('sound_die', { rate: 2, volume: this.getSfxVolume() / 2 });
         this.changeAnimation(HERO_WORDS.die);
 
+        // bandaid fix for stuck on death
+        setTimeout(() => {
+            callback();
+        }, 1000)
         this.sprite.on('animationcomplete', () => { 
             callback();
         })
