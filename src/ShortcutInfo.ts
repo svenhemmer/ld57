@@ -20,22 +20,31 @@ export class ShortcutInfo {
         })
 
         const text = this.scene.add.bitmapText(
-            50,
+            40,
             this.scene.scale.height - 100,
             'our-own-pixelfont',
             "PRESS H\nFOR HELP",
-            24
+            20
         )
         text.setScrollFactor(0)
 
         const text2 = this.scene.add.bitmapText(
-            350,
+            230,
             this.scene.scale.height - 100,
             'our-own-pixelfont',
             "PRESS M\nTO MUTE SOUND",
-            24
+            20
         )
         text2.setScrollFactor(0)
+
+        const text3 = this.scene.add.bitmapText(
+            490,
+            this.scene.scale.height - 100,
+            'our-own-pixelfont',
+            "PRESS V\nTO CHANGE VOLUME",
+            20
+        )
+        text3.setScrollFactor(0)
     }
 
     update() {

@@ -184,6 +184,7 @@ export class GameScene extends Phaser.Scene {
 
     onPlayerReachesGoal() {
         console.debug('Level finished!')
+        console.debug(this.hero)
         this.hero?.cleanup();
         this.endLevel()
     }

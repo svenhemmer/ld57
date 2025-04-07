@@ -34,6 +34,9 @@ export class AudioManagerScene extends Phaser.Scene {
     this.input.keyboard?.on('keydown-M', () => {
       this.toggleMute();
     });
+    this.input.keyboard?.on('keydown-V', () => {
+      this.changeVolume();
+    });
     this.createVolumeIcon();
   }
 
@@ -45,6 +48,7 @@ export class AudioManagerScene extends Phaser.Scene {
       .setInteractive();
 
     this.volumeIcon.on('pointerdown', this.changeVolume, this);
+    // this.volumeIcon.setDepth(9999)
   }
 
   private changeVolume() {
