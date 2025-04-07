@@ -82,7 +82,7 @@ export class Hero {
         this.ready = false;
         this.sprite.body!.velocity.y = 0;
         this.sprite.body!.velocity.x = 0;
-        this.scene.sound.play('sound_die', { rate: 2, volume: this.getSfxVolume() / 2 });
+        this.scene.sound.play('sound_die', { rate: 2, volume: this.getSfxVolume() / 1.5 });
         this.changeAnimation(HERO_WORDS.die);
 
         // bandaid fix for stuck on death

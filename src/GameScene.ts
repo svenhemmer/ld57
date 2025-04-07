@@ -189,12 +189,18 @@ export class GameScene extends Phaser.Scene {
         this.endLevel()
     }
 
+    isDying = false
     onPlayerDies() {
+        if (this.isDying) {
+            return
+        }
         console.debug('Level you died!')
         const callback = () => {
             this.hero = null;
             this.restartLevel();
+            this.isDying = false
         };
+        this.isDying = true
         this.hero?.die(callback);
     }
 
