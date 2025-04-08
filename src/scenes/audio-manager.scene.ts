@@ -9,11 +9,11 @@ export class AudioManagerScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.audio('bgMusic', '/audio/beepy.mp3');
-    this.load.image('volume0', '/volume/volume0.png');
-    this.load.image('volume1', '/volume/volume1.png');
-    this.load.image('volume2', '/volume/volume2.png');
-    this.load.image('volume3', '/volume/volume3.png');
+    this.load.audio('bgMusic', 'audio/beepy.mp3');
+    this.load.image('volume0', 'volume/volume0.png');
+    this.load.image('volume1', 'volume/volume1.png');
+    this.load.image('volume2', 'volume/volume2.png');
+    this.load.image('volume3', 'volume/volume3.png');
   }
 
   getCurrentVolume() {
