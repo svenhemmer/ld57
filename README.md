@@ -1,3 +1,8 @@
+# Disclaimer
+This is an entry to the Ludum Dare 57 game jam¹. It was created under time constraints in a single weekend with no regards to code quality whatsoever. All code, music, graphics and other assets were created from scratch. Use at your own risk.
+
+¹https://ldjam.com/events/ludum-dare/57/depth-of-field-3
+
 # Quickhelp
 ## First steps
 Run ```npm install``` to get all dependencies and the project in a runable state.
